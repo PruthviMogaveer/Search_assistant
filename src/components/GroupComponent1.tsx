@@ -1,6 +1,6 @@
 import { FunctionComponent, useMemo, type CSSProperties } from "react";
 
-export type GroupComponent1Type = {
+export type FooterType = {
   className?: string;
   sloganBackground?: string;
   divider?: string;
@@ -22,9 +22,13 @@ export type GroupComponent1Type = {
   contactDisplay?: CSSProperties["display"];
   contactMinWidth?: CSSProperties["minWidth"];
   groupDivMinHeight?: CSSProperties["minHeight"];
+  footerContainerWidth?: CSSProperties["width"];
+  footerContentHeight?: CSSProperties["height"];
+  legalHeight?: CSSProperties["height"];
+  legalLinksWidth?: CSSProperties["width"];
 };
 
-const GroupComponent1: FunctionComponent<GroupComponent1Type> = ({
+const Footer: FunctionComponent<FooterType> = ({
   className = "",
   sloganBackground,
   pricingDisplay,
@@ -44,6 +48,10 @@ const GroupComponent1: FunctionComponent<GroupComponent1Type> = ({
   contactDisplay,
   contactMinWidth,
   groupDivMinHeight,
+  footerContainerWidth,
+  footerContentHeight,
+  legalHeight,
+  legalLinksWidth,
 }) => {
   const pricing1Style: CSSProperties = useMemo(() => {
     return {
@@ -101,13 +109,43 @@ const GroupComponent1: FunctionComponent<GroupComponent1Type> = ({
     };
   }, [groupDivMinHeight]);
 
+  const footerContainerStyle: CSSProperties = useMemo(() => {
+    return {
+      width: footerContainerWidth,
+    };
+  }, [footerContainerWidth]);
+
+  const footerContentStyle: CSSProperties = useMemo(() => {
+    return {
+      height: footerContentHeight,
+    };
+  }, [footerContentHeight]);
+
+  const legalStyle: CSSProperties = useMemo(() => {
+    return {
+      height: legalHeight,
+    };
+  }, [legalHeight]);
+
+  const legalLinksStyle: CSSProperties = useMemo(() => {
+    return {
+      width: legalLinksWidth,
+    };
+  }, [legalLinksWidth]);
+
   return (
     <footer
       className={`self-stretch bg-color-2 flex flex-col items-start justify-start py-12 px-[70px] box-border gap-8 max-w-full text-left text-base text-color-5 font-heading-text-inter-semi-bold-24 mq750:gap-4 mq750:pl-[35px] mq750:pr-[35px] mq750:box-border ${className}`}
     >
       <div className="w-[1440px] h-[294px] relative bg-color-2 hidden max-w-full" />
-      <div className="flex flex-row items-start justify-center gap-[147px] max-w-full mq450:gap-[18px] mq750:gap-[37px] mq1275:gap-[73px] mq1275:flex-wrap">
-        <div className="w-[292px] flex flex-col items-start justify-start py-0 pl-0 pr-5 box-border gap-4 text-darkgray">
+      <div
+        className="flex flex-row items-start justify-center gap-[147px] max-w-full mq450:gap-[18px] mq750:gap-[37px] mq1275:gap-[73px] mq1275:flex-wrap"
+        style={footerContainerStyle}
+      >
+        <div
+          className="w-[292px] flex flex-col items-start justify-start py-0 pl-0 pr-5 box-border gap-4 text-darkgray"
+          style={footerContentStyle}
+        >
           <img
             className="w-[154px] flex-1 relative max-h-full object-cover z-[1]"
             loading="lazy"
@@ -187,7 +225,10 @@ const GroupComponent1: FunctionComponent<GroupComponent1Type> = ({
           </div>
         </div>
       </div>
-      <div className="self-stretch flex flex-col items-start justify-start gap-6 max-w-full text-darkgray mq750:h-auto">
+      <div
+        className="self-stretch flex flex-col items-start justify-start gap-6 max-w-full text-darkgray mq750:h-auto"
+        style={legalStyle}
+      >
         <img
           className="self-stretch relative max-w-full overflow-hidden max-h-full z-[1]"
           alt=""
@@ -197,7 +238,10 @@ const GroupComponent1: FunctionComponent<GroupComponent1Type> = ({
           <div className="relative leading-[20px] inline-block max-w-full z-[1]">
             © 2024 Search Assistant, Inc. All rights reserved.
           </div>
-          <div className="flex flex-row items-start justify-start gap-[54px] mq450:gap-[27px]">
+          <div
+            className="flex flex-row items-start justify-start gap-[54px] mq450:gap-[27px]"
+            style={legalLinksStyle}
+          >
             <a className="[text-decoration:none] relative leading-[20px] text-[inherit] z-[1]">{`Terms & Conditions`}</a>
             <a
               className="[text-decoration:none] relative leading-[20px] text-[inherit] z-[1]"
@@ -212,4 +256,4 @@ const GroupComponent1: FunctionComponent<GroupComponent1Type> = ({
   );
 };
 
-export default GroupComponent1;
+export default Footer;

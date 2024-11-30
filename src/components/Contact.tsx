@@ -9,6 +9,7 @@ export type ContactType = {
   heading3Width?: CSSProperties["width"];
   heading3Height?: CSSProperties["height"];
   ourTeamIsAlignSelf?: CSSProperties["alignSelf"];
+  contactInfoWidth?: CSSProperties["width"];
 };
 
 const Contact: FunctionComponent<ContactType> = ({
@@ -18,6 +19,7 @@ const Contact: FunctionComponent<ContactType> = ({
   heading3Width,
   heading3Height,
   ourTeamIsAlignSelf,
+  contactInfoWidth,
 }) => {
   const contactHeaderStyle: CSSProperties = useMemo(() => {
     return {
@@ -37,6 +39,12 @@ const Contact: FunctionComponent<ContactType> = ({
       alignSelf: ourTeamIsAlignSelf,
     };
   }, [ourTeamIsAlignSelf]);
+
+  const contactInfoStyle: CSSProperties = useMemo(() => {
+    return {
+      width: contactInfoWidth,
+    };
+  }, [contactInfoWidth]);
 
   return (
     <div
@@ -60,7 +68,10 @@ const Contact: FunctionComponent<ContactType> = ({
             Our team is here to help you succeed
           </div>
         </div>
-        <div className="h-[66px] w-[285px] flex flex-col items-start justify-start pt-3 px-0 pb-0 box-border text-left text-lg text-color-6">
+        <div
+          className="h-[66px] w-[285px] flex flex-col items-start justify-start pt-3 px-0 pb-0 box-border text-left text-lg text-color-6"
+          style={contactInfoStyle}
+        >
           <div className="self-stretch flex-1 flex flex-row items-start justify-start gap-6">
             <div className="self-stretch w-[54px] shadow-[0px_0px_10px_rgba(0,_0,_0,_0.05)] flex flex-row items-center justify-center relative gap-2.5">
               <div className="self-stretch flex-1 relative rounded-[50%] bg-color" />
