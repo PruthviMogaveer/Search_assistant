@@ -15,7 +15,7 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
 
   return (
     <section
-      className={`flex flex-row items-start justify-start pt-0 px-0 pb-[33px] box-border max-w-full ${className}`}
+      className={`self-stretch flex flex-row items-start justify-start pt-0 px-0 pb-[33px] box-border max-w-full ${className}`}
     >
       <TopNavigation
         sALogo1="/sa-logo-1@2x.png"
