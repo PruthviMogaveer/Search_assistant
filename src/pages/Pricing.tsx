@@ -65,7 +65,7 @@ const Pricing: FunctionComponent = () => {
       </section>
       <PricingSection />
       <img
-        className="w-[NaNpx] h-[483px] absolute !m-[0] top-[431px] left-[-1px] object-cover z-[2]"
+        className="w-[1600px] h-[483px] absolute !m-[0] top-[431px] left-[-1px] object-cover z-[2]"
         alt=""
         src="/background-1@2x.png"
       />

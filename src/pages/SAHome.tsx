@@ -15,9 +15,9 @@ const SAHome: FunctionComponent = () => {
   return (
     <div className="w-full relative bg-color-5 overflow-hidden flex flex-col items-start justify-start gap-24 leading-[normal] tracking-[normal] text-left text-45xl text-color-2 font-heading-text-inter-semi-bold-24 mq450:gap-6 mq750:gap-12">
       <div className="w-[532.4px] h-[545.8px] absolute !m-[0] bottom-[2817.4px] left-[-417px] [filter:blur(1000px)] rounded-[50%] bg-color" />
-      <section className="w-full h-[1206.6px] absolute !m-[0] top-[0px] right-[0px] left-[0px]">
+      <section className="w-[calc(100%_+_160px)] h-[1206.6px] absolute !m-[0] top-[0px] right-[-160px] left-[0px]">
         <img
-          className="absolute top-[0px] left-[-54px] w-[1548px] h-[870.8px]"
+          className="absolute top-[0px] left-[-54px] w-[1600px] h-[870.8px]"
           alt=""
           src="/background.svg"
         />
