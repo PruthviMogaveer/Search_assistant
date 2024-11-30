@@ -54,7 +54,7 @@ const Pricing: FunctionComponent = () => {
         pricingAlignItems="unset"
         contactHeight="unset"
       />
-      <section className="w-full h-[1366.6px] absolute !m-[0] top-[0px] right-[0px] left-[0px]">
+      <section className="w-[calc(100%_+_1340px)] h-[1366.6px] absolute !m-[0] top-[0px] right-[-1340px] left-[0px]">
         <img
           className="absolute top-[0px] left-[-54px] w-[1548px] h-[870.8px]"
           alt=""
@@ -65,7 +65,7 @@ const Pricing: FunctionComponent = () => {
       </section>
       <PricingSection />
       <img
-        className="w-[1600px] h-[483px] absolute !m-[0] top-[431px] left-[-1px] object-cover z-[2]"
+        className="w-[NaNpx] h-[483px] absolute !m-[0] top-[431px] left-[-1px] object-cover z-[2]"
         alt=""
         src="/background-1@2x.png"
       />
