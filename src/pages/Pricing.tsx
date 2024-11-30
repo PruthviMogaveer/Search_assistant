@@ -10,7 +10,7 @@ const Pricing: FunctionComponent = () => {
   const navigate = useNavigate();
 
   const onSALogoClick = useCallback(() => {
-    navigate("/");
+    navigate("/sa-home");
   }, [navigate]);
 
   return (
@@ -65,7 +65,7 @@ const Pricing: FunctionComponent = () => {
       </section>
       <PricingSection />
       <img
-        className="w-[1440px] h-[483px] absolute !m-[0] top-[431px] left-[-1px] object-cover z-[2]"
+        className="w-[1500px] h-[483px] absolute !m-[0] top-[431px] left-[-1px] object-cover z-[2]"
         alt=""
         src="/background-1@2x.png"
       />

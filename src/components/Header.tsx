@@ -10,7 +10,7 @@ const Header: FunctionComponent<HeaderType> = ({ className = "" }) => {
   const navigate = useNavigate();
 
   const onFeaturesPricingContactClick = useCallback(() => {
-    navigate("/pricing");
+    navigate("/");
   }, [navigate]);
 
   return (

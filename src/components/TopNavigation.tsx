@@ -204,7 +204,7 @@ const TopNavigation: FunctionComponent<TopNavigationType> = ({
   const navigate = useNavigate();
 
   const onFeaturesPricingContactClick = useCallback(() => {
-    navigate("/pricing");
+    navigate("/");
   }, [navigate]);
 
   return (

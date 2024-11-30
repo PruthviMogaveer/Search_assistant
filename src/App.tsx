@@ -5,8 +5,8 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
-import SAHome from "./pages/SAHome";
 import Pricing from "./pages/Pricing";
+import SAHome from "./pages/SAHome";
 
 function App() {
   const action = useNavigationType();
@@ -28,7 +28,7 @@ function App() {
         title = "";
         metaDescription = "";
         break;
-      case "/pricing":
+      case "/sa-home":
         title = "";
         metaDescription = "";
         break;
@@ -50,8 +50,8 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<SAHome />} />
-      <Route path="/pricing" element={<Pricing />} />
+      <Route path="/" element={<Pricing />} />
+      <Route path="/sa-home" element={<SAHome />} />
     </Routes>
   );
 }
