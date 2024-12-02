@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useCallback } from "react";
 import Header from "../components/Header";
 import ButtonCTA from "../components/ButtonCTA";
 import ProblemContainer from "../components/ProblemContainer";
@@ -10,8 +10,11 @@ import VideoDemo from "../components/VideoDemo";
 import TestimonialsHome from "../components/TestimonialsHome";
 import Contact from "../components/Contact";
 import Footer from "../components/GroupComponent1";
+import TopNavigation from "../components/TopNavigation";
 
 const SAHome: FunctionComponent = () => {
+
+
   return (
     <div className="w-full relative bg-color-5 overflow-hidden flex flex-col items-start justify-start gap-24 leading-[normal] tracking-[normal] text-left text-45xl text-color-2 font-heading-text-inter-semi-bold-24 mq450:gap-6 mq750:gap-12">
       <div className="w-[532.4px] h-[545.8px] absolute !m-[0] bottom-[2817.4px] left-[-417px] [filter:blur(1000px)] rounded-[50%] bg-color" />
@@ -30,7 +33,44 @@ const SAHome: FunctionComponent = () => {
           src="/mask-group@2x.png"
         />
       </section>
-      <Header />
+      <TopNavigation
+        sALogo1="/sa-logo-1@2x.png"
+        // pricingColor="#26a96c"
+        topNavigationFlex="unset"
+        topNavigationAlignSelf="stretch"
+        featuresWidth="unset"
+        featuresDisplay="inline-block"
+        featuresAlignItems="unset"
+        featuresMinWidth="76px"
+        pricingDisplay="inline-block"
+        pricingMinWidth="61px"
+        contactWidth="unset"
+        contactDisplay="inline-block"
+        contactAlignItems="unset"
+        contactMinWidth="70px"
+        topNavigationHeight="unset"
+        topNavigationWidth="unset"
+        topNavigationJustifyContent="space-between"
+        topNavigationGap="20px"
+        sALogo1Height="unset"
+        sALogo1AlignSelf="stretch"
+        sALogo1MaxHeight="100%"
+        sALogo1MinHeight="60px"
+        navLinksHeight="unset"
+        linksContainerHeight="unset"
+        linksContainerWidth="unset"
+        linksContainerFlex="1"
+        featuresPricingContactWidth="unset"
+        featuresPricingContactHeight="unset"
+        featuresPricingContactJustifyContent="space-between"
+        featuresPricingContactGap="20px"
+        featuresPricingContactAlignSelf="stretch"
+        featuresHeight="unset"
+        pricingHeight="unset"
+        pricingWidth="unset"
+        pricingAlignItems="unset"
+        contactHeight="unset"
+      />
       <div className="w-[922px] flex flex-row items-start justify-start pt-0 px-[70px] pb-[99px] box-border max-w-full mq750:pb-16 mq750:box-border mq1100:pl-[35px] mq1100:pr-[35px] mq1100:box-border">
         <div className="flex-1 flex flex-row items-end justify-start max-w-full [row-gap:20px] mq750:flex-wrap">
           <div className="flex-1 flex flex-col items-start justify-start gap-6 min-w-[379px] shrink-0 max-w-full mq750:min-w-full">

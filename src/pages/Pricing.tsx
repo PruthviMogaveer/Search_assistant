@@ -1,4 +1,4 @@
-import { FunctionComponent, useCallback } from "react";
+import { FunctionComponent } from "react";
 import { useNavigate } from "react-router-dom";
 import TopNavigation from "../components/TopNavigation";
 import PricingSection from "../components/PricingSection";
@@ -9,15 +9,13 @@ import Testimonials from "../components/Testimonials";
 const Pricing: FunctionComponent = () => {
   const navigate = useNavigate();
 
-  const onSALogoClick = useCallback(() => {
-    navigate("/");
-  }, [navigate]);
+
 
   return (
     <div className="w-full h-[3577px] relative bg-color-5 overflow-hidden flex flex-col items-end justify-start gap-24 leading-[normal] tracking-[normal] mq800:h-auto mq800:gap-12 mq450:gap-6">
       <TopNavigation
         sALogo1="/sa-logo-1@2x.png"
-        onSALogoClick={onSALogoClick}
+
         pricingColor="#26a96c"
         topNavigationFlex="unset"
         topNavigationAlignSelf="stretch"
