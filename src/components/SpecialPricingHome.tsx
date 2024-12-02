@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import ButtonCTA from "ButtonCTA";
+import ButtonCTA from "./ButtonCTA";
 
 export type SpecialPricingHomeType = {
   className?: string;

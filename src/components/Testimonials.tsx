@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import TestimonialsPricing from "TestimonialsPricing";
+import TestimonialsPricing from "./TestimonialsPricing";
 import Contact from "./Contact";
 import Footer from "./GroupComponent1";
 
