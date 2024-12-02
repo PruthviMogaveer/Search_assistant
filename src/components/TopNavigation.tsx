@@ -228,7 +228,7 @@ const TopNavigation: FunctionComponent<TopNavigationType> = ({
             <Link
               className="[text-decoration:none] h-6 w-[76px] relative leading-[24px] font-medium text-[inherit] flex items-center shrink-0"
               style={featuresStyle}
-              to="/features"
+              to="#feature"
             >
               Features
             </Link>
@@ -242,7 +242,7 @@ const TopNavigation: FunctionComponent<TopNavigationType> = ({
             <Link
               className="[text-decoration:none] h-6 w-[70px] relative leading-[24px] font-medium text-[inherit] flex items-center shrink-0"
               style={contactStyle}
-              to="/contact"
+              to="#contact"
             >
               Contact
             </Link>

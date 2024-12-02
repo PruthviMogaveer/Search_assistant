@@ -51,6 +51,7 @@ const Pricing: FunctionComponent = () => {
         pricingWidth="unset"
         pricingAlignItems="unset"
         contactHeight="unset"
+        className="z-10"
       />
       <section className="w-[calc(100%_+_1340px)] h-[1366.6px] absolute !m-[0] top-[0px] right-[-1340px] left-[0px]">
         <img

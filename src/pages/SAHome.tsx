@@ -17,23 +17,7 @@ const SAHome: FunctionComponent = () => {
 
   return (
     <div className="w-full relative bg-color-5 overflow-hidden flex flex-col items-start justify-start gap-24 leading-[normal] tracking-[normal] text-left text-45xl text-color-2 font-heading-text-inter-semi-bold-24 mq450:gap-6 mq750:gap-12">
-      <div className="w-[532.4px] h-[545.8px] absolute !m-[0] bottom-[2817.4px] left-[-417px] [filter:blur(1000px)] rounded-[50%] bg-color" />
-      <section className="self-stretch h-[1206.6px] absolute !m-[0] w-[111.11%] top-[0px] right-[-11.11%] left-[0%]">
-        <img
-          className="absolute top-[0px] left-[-54px] w-[1600px] h-[870.8px]"
-          alt=""
-          src="/background.svg"
-        />
-        <div className="absolute top-[557.6px] left-[1172.8px] [filter:blur(1000px)] rounded-[50%] bg-color w-[634px] h-[649px] z-[1]" />
-        <div className="absolute top-[-375px] left-[-367px] [filter:blur(1000px)] rounded-[50%] bg-color w-[634px] h-[650px] z-[1]" />
-        <img
-          className="absolute top-[252px] left-[740px] w-[585px] h-[446.5px] object-contain z-[2]"
-          loading="lazy"
-          alt=""
-          src="/mask-group@2x.png"
-        />
-      </section>
-      <TopNavigation
+       <TopNavigation
         sALogo1="/sa-logo-1@2x.png"
         // pricingColor="#26a96c"
         topNavigationFlex="unset"
@@ -70,7 +54,25 @@ const SAHome: FunctionComponent = () => {
         pricingWidth="unset"
         pricingAlignItems="unset"
         contactHeight="unset"
+        className="z-10"
       />
+      <div className="w-[532.4px] h-[545.8px] absolute !m-[0] bottom-[2817.4px] left-[-417px] [filter:blur(1000px)] rounded-[50%] bg-color" />
+      <section className="self-stretch h-[1206.6px] absolute !m-[0] w-[111.11%] top-[0px] right-[-11.11%] left-[0%]">
+        <img
+          className="absolute top-[0px] left-[-54px] w-[1600px] h-[870.8px]"
+          alt=""
+          src="/background.svg"
+        />
+        <div className="absolute top-[557.6px] left-[1172.8px] [filter:blur(1000px)] rounded-[50%] bg-color w-[634px] h-[649px] z-[1]" />
+        <div className="absolute top-[-375px] left-[-367px] [filter:blur(1000px)] rounded-[50%] bg-color w-[634px] h-[650px] z-[1]" />
+        <img
+          className="absolute top-[252px] left-[740px] w-[585px] h-[446.5px] object-contain z-[2]"
+          loading="lazy"
+          alt=""
+          src="/mask-group@2x.png"
+        />
+      </section>
+     
       <div className="w-[922px] flex flex-row items-start justify-start pt-0 px-[70px] pb-[99px] box-border max-w-full mq750:pb-16 mq750:box-border mq1100:pl-[35px] mq1100:pr-[35px] mq1100:box-border">
         <div className="flex-1 flex flex-row items-end justify-start max-w-full [row-gap:20px] mq750:flex-wrap">
           <div className="flex-1 flex flex-col items-start justify-start gap-6 min-w-[379px] shrink-0 max-w-full mq750:min-w-full">
@@ -177,6 +179,7 @@ const SAHome: FunctionComponent = () => {
       <VideoDemo />
       <section className="self-stretch flex flex-col items-start justify-start gap-12 max-w-full mq750:gap-6">
         <TestimonialsHome />
+        <div id="contact">
         <Contact
           vector="/vector-9.svg"
           contactHeaderWidth="unset"
@@ -185,6 +188,7 @@ const SAHome: FunctionComponent = () => {
           ourTeamIsAlignSelf="stretch"
           contactInfoWidth="unset"
         />
+        </div>
         <Footer sloganBackground="/-1@2x.png" divider="/divider.svg" />
       </section>
     </div>
