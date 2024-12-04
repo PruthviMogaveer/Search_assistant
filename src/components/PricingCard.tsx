@@ -1,4 +1,4 @@
-import { FunctionComponent, useMemo, type CSSProperties } from "react";
+import React, { useMemo, type CSSProperties } from "react";
 import ButtonGetStarted from "./ButtonGetStarted";
 
 export type PricingCardType = {
@@ -24,7 +24,7 @@ export type PricingCardType = {
   frameDivWidth1?: CSSProperties["width"];
 };
 
-const PricingCard: FunctionComponent<PricingCardType> = ({
+const PricingCard: React.FunctionComponent<PricingCardType> = ({
   className = "",
   groupDivFlex,
   groupDivMinWidth,
@@ -89,7 +89,7 @@ const PricingCard: FunctionComponent<PricingCardType> = ({
 
   return (
     <div
-      className={`flex-[0.9628] shadow-[0px_4px_9px_rgba(0,_0,_0,_0.05)] rounded-xl bg-color-5 flex flex-col items-start justify-start py-[54px] px-14 box-border gap-4 min-w-[275px] max-w-full z-[3] text-left text-13xl text-color-3 font-heading-text-inter-semi-bold-24 mq450:py-[35px] mq450:px-5 mq450:box-border mq1325:flex-1 ${className}`}
+      className={`flex-[0.9628] shadow-[0px_4px_9px_rgba(0,_0,_0,_0.05)] mq800:shadow-lg rounded-xl bg-color-5 flex flex-col items-start justify-start py-[54px] px-14 box-border gap-4 max-w-full z-[3] text-left text-13xl text-color-3 font-heading-text-inter-semi-bold-24 mq450:py-[35px] mq450:px-5 mq450:box-border mq1325:flex-1 ${className}`}
       style={groupDiv1Style}
     >
       <div
@@ -97,32 +97,32 @@ const PricingCard: FunctionComponent<PricingCardType> = ({
         style={rectangleDivStyle}
       />
       <div
-        className="self-stretch flex flex-row items-start justify-start py-0 pl-[66px] pr-[67px] mq450:pl-5 mq450:pr-5 mq450:box-border"
+        className="self-stretch flex flex-row items-start justify-center mq800:justify-center py-0  mq450:pl-5 mq450:pr-5 mq450:box-border"
         style={frameDivStyle}
       >
-        <h2 className="m-0 relative text-inherit leading-[30px] font-medium font-[inherit] z-[1] mq800:text-7xl mq800:leading-[24px] mq450:text-lgi mq450:leading-[18px]">
+        <h2 className="m-0 relative text-inherit leading-[30px] text-center font-medium font-[inherit] z-[1] mq800:text-center mq800:text-7xl mq800:leading-[24px] mq450:text-lgi mq450:leading-[18px]">
           {mainStreet}
         </h2>
       </div>
       <div
-        className="self-stretch flex flex-row items-start justify-center py-0 pl-0 pr-px text-37xl mq450:pl-5 mq450:pr-5 mq450:box-border"
+        className="self-stretch flex flex-row items-start justify-center mq800:justify-center py-0 pl-0 pr-px text-37xl mq450:pl-5 mq450:pr-5 mq450:box-border"
         style={frameDiv1Style}
       >
         <b
-          className="relative inline-block min-w-[113px] whitespace-nowrap z-[1] mq800:text-26xl mq450:text-15xl"
+          className="relative inline-block min-w-[113px] whitespace-nowrap z-[1] mq800:text-center mq800:w-full mq800:text-26xl mq450:text-15xl"
           style={bStyle}
         >
           {prop}
         </b>
       </div>
       <div
-        className="self-stretch rounded-xl bg-whitesmoke-100 flex flex-col items-start justify-start p-8 gap-8 z-[1] text-lg text-color-6 mq450:gap-4"
+        className="self-stretch rounded-xl bg-whitesmoke-100 flex flex-col items-center justify-center p-8 gap-8 z-[1] text-lg text-color-6 mq450:gap-4"
         style={frameDiv2Style}
       >
         <div className="w-[311px] h-56 relative rounded-xl bg-whitesmoke-100 hidden" />
-        <div className="flex flex-col items-start justify-start gap-2">
-          <div className="flex flex-row items-start justify-start gap-4">
-            <div className="flex flex-col items-start justify-start pt-[7px] px-0 pb-0">
+        <div className="flex flex-col items-start justify-center gap-2 mq800:self-center">
+          <div className="flex flex-row items-start justify-start gap-4 mq800:text-center">
+            <div className="flex flex-col items-start justify-start pt-[7px] px-0 pb-0 mq800:hidden">
               <img
                 className="w-4 h-4 relative z-[2]"
                 loading="lazy"
@@ -130,24 +130,26 @@ const PricingCard: FunctionComponent<PricingCardType> = ({
                 src="/vector-2.svg"
               />
             </div>
-            <div className="relative leading-[30px] z-[2]">
+            <div className="relative leading-[30px] z-[2] mq800:text-center">
               {upTo1MEarnings}
             </div>
           </div>
-          <div className="flex flex-row items-start justify-start gap-4">
-            <div className="flex flex-col items-start justify-start pt-[7px] px-0 pb-0">
+          <div className="flex flex-row items-start justify-start gap-4 mq800:text-center">
+            <div className="flex flex-col items-start justify-start pt-[7px] px-0 pb-0 mq800:hidden">
               <img
                 className="w-4 h-4 relative z-[2]"
                 alt=""
                 src="/vector-2.svg"
               />
             </div>
-            <div className="relative leading-[30px] z-[2]">
+            <div className="relative leading-[30px] z-[2] mq800:text-center">
               {coverageFor2States}
             </div>
           </div>
         </div>
-        <ButtonGetStarted />
+        <div className="mq800:self-center">
+          <ButtonGetStarted />
+        </div>
       </div>
     </div>
   );
