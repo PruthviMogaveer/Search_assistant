@@ -27,7 +27,7 @@ const ButtonGetStarted: FunctionComponent<ButtonGetStartedType> = ({
 
   return (
     <button
-      className={`cursor-pointer [border:none] py-[18px] pl-[73px] pr-[72px] bg-color-5 self-stretch shadow-[0px_4px_9px_rgba(0,_0,_0,_0.05)] rounded-3xs flex flex-row items-start justify-start whitespace-nowrap hover:bg-gainsboro-500 ${className}`}
+      className={` cursor-pointer [border:none] py-[18px] pl-[73px] pr-[72px] bg-color-5 self-stretch shadow-[0px_4px_9px_rgba(0,_0,_0,_0.05)] rounded-3xs flex flex-row items-start justify-start whitespace-nowrap hover:bg-gainsboro-500 ${className}`}
       style={buttonStyle}
     >
       <b

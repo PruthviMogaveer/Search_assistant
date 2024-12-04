@@ -1,21 +1,17 @@
 import { FunctionComponent } from "react";
-import { useNavigate } from "react-router-dom";
-import TopNavigation from "../components/TopNavigation";
 import PricingSection from "../components/PricingSection";
 import SpecialPricing from "../components/SpecialPricing";
 import FAQ from "../components/FAQ";
+import TopNavigation from "../components/navigation/TopNavigation";
 import Testimonials from "../components/Testimonials";
+import Contact from "../components/Contact";
+import Footer from "../components/footer/Footer";
 
 const Pricing: FunctionComponent = () => {
-  const navigate = useNavigate();
-
-
-
   return (
-    <div className="w-full h-[3577px] relative bg-color-5 overflow-hidden flex flex-col items-end justify-start gap-24 leading-[normal] tracking-[normal] mq800:h-auto mq800:gap-12 mq450:gap-6">
+    <div className="w-full relative bg-color-5 overflow-hidden flex flex-col items-start justify-start gap-24 leading-[normal] tracking-[normal] text-left text-45xl text-color-2 font-heading-text-inter-semi-bold-24 mq450:gap-6 mq750:gap-12">
       <TopNavigation
         sALogo1="/sa-logo-1@2x.png"
-
         pricingColor="#26a96c"
         topNavigationFlex="unset"
         topNavigationAlignSelf="stretch"
@@ -70,8 +66,20 @@ const Pricing: FunctionComponent = () => {
       />
       <SpecialPricing />
       <FAQ />
-      <Testimonials />
-      <div className="mr-[-241.6px] w-[445.6px] h-[435.6px] relative [filter:blur(1000px)] rounded-[50%] bg-color shrink-0 max-w-full" />
+      <section className="self-stretch flex flex-col items-start justify-start gap-12 max-w-full mq750:gap-6">
+        <Testimonials />
+        <div id="contact">
+          <Contact
+            vector="/vector-9.svg"
+            contactHeaderWidth="unset"
+            heading3Width="218px"
+            heading3Height="unset"
+            ourTeamIsAlignSelf="stretch"
+            contactInfoWidth="unset"
+          />
+        </div>
+        <Footer sloganBackground="/-1@2x.png" divider="/divider.svg" />
+      </section>
     </div>
   );
 };

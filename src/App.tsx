@@ -1,12 +1,6 @@
 import { useEffect } from "react";
-import {
-  Routes,
-  Route,
-  useNavigationType,
-  useLocation,
-} from "react-router-dom";
-import SAHome from "./pages/SAHome";
-import Pricing from "./pages/Pricing";
+import { useNavigationType, useLocation } from "react-router-dom";
+import { AppRoutes } from "./routes";
 
 function App() {
   const action = useNavigationType();
@@ -48,12 +42,7 @@ function App() {
     }
   }, [pathname]);
 
-  return (
-    <Routes>
-      <Route path="/" element={<SAHome />} />
-      <Route path="/pricing" element={<Pricing />} />
-    </Routes>
-  );
+  return <AppRoutes />;
 }
 
 export default App;
