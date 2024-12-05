@@ -264,7 +264,7 @@ const TopNavigation: FunctionComponent<TopNavigationType> = ({
 
   return (
     <header
-      className={`mq1125:-mb-10 h-[110px] w-[1440px] flex flex-row items-start justify-start mq1125:items-center mq1125:px-6 py-[25px] px-[70px] box-border gap-[523px] ${className}`}
+      className={`mq1125:-mb-10 mq1125:-mt-5 h-[110px] w-[1440px] flex flex-row items-start justify-start mq1125:items-center mq1125:px-6 py-[25px] px-[70px] box-border gap-[523px] ${className}`}
       style={topNavigationStyle}
     >
       <RouterLink to="/" className="">
