@@ -146,15 +146,15 @@ const Footer: FunctionComponent<FooterType> = ({
 
   return (
     <footer
-      className={`self-stretch bg-color-2 flex flex-col items-start justify-start py-12 px-[70px] box-border gap-8 max-w-full text-left text-base text-color-5 font-heading-text-inter-semi-bold-24 mq750:gap-4 mq750:pl-[35px] mq750:pr-[35px] mq750:box-border mq800:items-center mq800:justify-center ${className}`}
+      className={`self-stretch bg-color-2 flex flex-col items-start justify-start mq1125:justify-center mq1125:items-center py-12 px-[70px] box-border gap-8 max-w-full text-left text-base text-color-5 font-heading-text-inter-semi-bold-24 mq750:gap-4 mq1125:px-6 mq1125: mq750:box-border mq800:items-center mq800:justify-center ${className}`}
     >
       <div className="w-[1440px] h-[294px] relative bg-color-2 hidden max-w-full" />
       <div
-        className="mq800:space-y-6 flex flex-row items-start justify-start gap-[147px] max-w-full mq450:gap-[18px] mq750:gap-[37px] mq1275:gap-[73px] mq1275:flex-wrap mq800:flex-col mq800:items-center mq800:justify-center"
+        className="mq800:space-y-6 flex flex-row items-start justify-start mq1125:justify-center mq1125:items-center gap-[147px] max-w-full mq450:gap-[18px] mq750:gap-[37px] mq1275:gap-[73px] mq1275:flex-wrap mq800:flex-col mq800:items-center mq800:justify-center"
         style={footerContainerStyle}
       >
         <div
-          className="w-[292px] flex flex-col items-start justify-start py-0 pl-0 pr-5 box-border gap-4 text-darkgray mq800:items-center mq800:justify-center"
+          className="w-[292px]  flex flex-col items-start justify-start mq1125:justify-center mq1125:items-center py-0 pl-0 pr-5 mq1125:pr-0 box-border gap-4 text-darkgray mq800:items-center mq800:justify-center"
           style={footerContentStyle}
         >
           <RouterLink to="/" onClick={handleLogoClick}>
