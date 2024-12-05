@@ -154,7 +154,7 @@ const Footer: FunctionComponent<FooterType> = ({
         style={footerContainerStyle}
       >
         <div
-          className="w-[292px]  flex flex-col items-start justify-start mq1125:justify-center mq1125:items-center py-0 pl-0 pr-5 mq1125:pr-0 box-border gap-4 text-darkgray mq800:items-center mq800:justify-center"
+          className="w-[292px] flex flex-col items-start justify-start mq1125:justify-center mq1125:items-center py-0 pl-0 pr-5 mq1125:pr-0 box-border gap-4 text-darkgray mq800:items-center mq800:justify-center"
           style={footerContentStyle}
         >
           <RouterLink to="/" onClick={handleLogoClick}>
@@ -226,25 +226,49 @@ const Footer: FunctionComponent<FooterType> = ({
           <div className="relative leading-[24px] z-[1] mq800:text-center">
             Join our mailing list
           </div>
-          <div
+          <form
+            action="https://search-assistant.outseta.com/email/lists/wQX7pxmK/subscribe"
+            method="post"
             className="self-stretch rounded-51xl border-darkgray border-[1px] border-solid box-border flex flex-row items-start justify-between py-0.5 pl-[15px] pr-[5px] min-h-[50px] max-w-full gap-5 z-[1] mq450:flex-wrap mq800:self-center"
             style={groupDivStyle}
           >
+            <style>
+              {`
+                input:-webkit-autofill,
+                input:-webkit-autofill:hover,
+                input:-webkit-autofill:focus,
+                input:-webkit-autofill:active  {
+                    -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+                    -webkit-text-fill-color: #000 !important;
+                }
+              `}
+            </style>
             <input
-              className="w-[161px] [border:none] [outline:none] bg-[transparent] h-[33px] flex flex-col items-start justify-start pt-[9px] px-0 pb-0 box-border font-heading-text-inter-semi-bold-24 text-base text-dimgray"
+              className="flex-grow [border:none] [outline:none] bg-[transparent] h-[33px] flex flex-col items-start justify-start pt-[9px] px-0 pb-0 box-border font-heading-text-inter-semi-bold-24 text-base text-dimgray"
               placeholder="Enter your email here"
-              type="text"
+              type="email"
+              id="Email"
+              name="Email"
+              required
             />
-            <div className="h-[50px] w-[329px] relative rounded-51xl border-darkgray border-[1px] border-solid box-border hidden max-w-full" />
-            <div className="h-[42px] w-[42px] relative">
-              <div className="absolute top-[0px] left-[0px] rounded-[50%] bg-color w-full h-full z-[2]" />
-              <img
-                className="absolute top-[15px] left-[15px] w-3 h-3 z-[3]"
-                alt=""
-                src="/vector-10.svg"
+            <div
+              style={{ position: "absolute", left: "-5000px" }}
+              aria-hidden="true"
+            >
+              <input
+                type="text"
+                name="o_MPOYuiwfcsNRzpUlZd5KqnTL_YsHf4SLb"
+                tabIndex={-1}
+                value=""
               />
             </div>
-          </div>
+            <button
+              type="submit"
+              className="cursor-pointer h-[42px] w-[42px] rounded-[50%] flex items-center justify-center bg-color text-color-5"
+            >
+              <img className="w-3 h-3" alt="Submit" src="/vector-10.svg" />
+            </button>
+          </form>
         </div>
       </div>
       <div
