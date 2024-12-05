@@ -81,8 +81,17 @@ const Contact: FunctionComponent<ContactType> = ({
               />
             </div>
             <div className="flex-1 flex flex-row mq800:-mt-20 items-start justify-start pt-3 px-0 pb-0 mq800:items-center">
-              <img src="/EmailSmall.svg" alt=""  className="mq800:block hidden"/>
-              <div className="relative leading-[30px] font-medium whitespace-nowrap mq800:text-center">
+              <img
+                src="/EmailSmall.svg"
+                alt=""
+                className="mq800:block hidden"
+              />
+              <div
+                className="relative leading-[30px] font-medium whitespace-nowrap mq800:text-center cursor-pointer"
+                onClick={() =>
+                  (window.location.href = "mailto:info@searchassistant.io")
+                }
+              >
                 info@searchassistant.io
               </div>
             </div>

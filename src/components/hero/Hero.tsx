@@ -3,7 +3,7 @@ import ButtonCTA from "../buttons/ButtonCTA";
 
 const Hero: FunctionComponent = () => {
   return (
-    <div className="w-full flex flex-row items-start justify-start pt-0 px-[70px] pb-[99px] box-border max-w-full mq750:pb-16 mq750:box-border  mq800:px-6 mq1100:box-border">
+    <div className="mq1125:mt-8 w-full flex flex-row items-start justify-start pt-0 px-[70px] pb-[99px] box-border max-w-full mq750:pb-16 mq750:box-border  mq800:px-6 mq1100:box-border">
       <div className="flex-1 flex flex-row items-end justify-start mq1125:items-center mq1125:justify-center max-w-full [row-gap:20px] mq750:flex-wrap">
         <div className="flex-1 flex flex-col items-start justify-start mq1125:items-center mq1125:justify-center gap-6 min-w-[379px] shrink-0 max-w-full mq750:min-w-full">
           <h1 className=" m-0 self-stretch relative text-inherit capitalize z-[2] font-[inherit] mq450:text-19xl mq750:text-32xl mq1125:text-center mq1125:-mb-8">

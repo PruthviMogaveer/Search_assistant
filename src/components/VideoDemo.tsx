@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import ButtonCTA from "./ButtonCTA";
+import ButtonCTA from "../components/buttons/ButtonCTA";
 
 export type VideoDemoType = {
   className?: string;

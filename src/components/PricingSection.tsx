@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PricingCard from "./PricingCard";
-import ButtonGetStarted from "./ButtonGetStarted";
+import ButtonGetStarted from "./buttons/ButtonGetStarted";
 
 export type PricingSectionType = {
   className?: string;
@@ -60,24 +60,34 @@ const PricingSection: React.FunctionComponent<PricingSectionType> = ({
               <div className="h-[72px]  relative shadow-[0px_4px_9px_rgba(0,_0,_0,_0.05)] rounded-3xs bg-color-5 hidden max-w-full" />
               <div className="flex flex-col items-start justify-start px-0 pb-0">
                 <button
-                  className={`cursor-pointer [border:none] mq800:rounded-lg py-[18px] mq800:py-4 mq800:px-3 px-6 rounded-3xs flex flex-row items-start justify-start z-[1] ${isAnnual ? 'bg-color hover:bg-mediumseagreen' : 'bg-color-5'}`}
+                  className={`cursor-pointer [border:none] mq800:rounded-lg py-[18px] mq800:py-4 mq800:px-3 px-6 rounded-3xs flex flex-row items-start justify-start z-[1] ${
+                    isAnnual ? "bg-color hover:bg-mediumseagreen" : "bg-color-5"
+                  }`}
                   onClick={() => setIsAnnual(true)}
                 >
-
                   <div className="h-[58px] w-40  relative rounded-3xs bg-color hidden" />
-                  <div className={`relative text-lg mq800:text-[14px] font-medium font-heading-text-inter-semi-bold-24 text-left inline-block min-w-[72px] z-[2] ${isAnnual ? 'text-color-5' : 'text-gray-500'}`}>
+                  <div
+                    className={`relative text-lg mq800:text-[14px] font-medium font-heading-text-inter-semi-bold-24 text-left inline-block min-w-[72px] z-[2] ${
+                      isAnnual ? "text-color-5" : "text-gray-500"
+                    }`}
+                  >
                     Annual (Save 20%)
                   </div>
                 </button>
               </div>
               <div className="flex flex-col items-start justify-start px-0 pb-0">
                 <button
-                  className={`cursor-pointer [border:none] mq800:rounded-lg py-[18px] mq800:py-4 mq800:px-3 px-11 rounded-3xs flex flex-row items-start justify-start z-[1] ${isAnnual ? 'bg-color-5' : 'bg-color hover:bg-mediumseagreen'}`}
+                  className={`cursor-pointer [border:none] mq800:rounded-lg py-[18px] mq800:py-4 mq800:px-3 px-11 rounded-3xs flex flex-row items-start justify-start z-[1] ${
+                    isAnnual ? "bg-color-5" : "bg-color hover:bg-mediumseagreen"
+                  }`}
                   onClick={() => setIsAnnual(false)}
                 >
-
                   <div className="h-[58px] w-40 relative rounded-3xs bg-color hidden" />
-                  <div className={`relative text-lg font-medium mq800:text-[14px] text-center font-heading-text-inter-semi-bold-24  inline-block min-w-[72px] z-[2] ${isAnnual ? 'text-gray-500' : 'text-color-5'}`}>
+                  <div
+                    className={`relative text-lg font-medium mq800:text-[14px] text-center font-heading-text-inter-semi-bold-24  inline-block min-w-[72px] z-[2] ${
+                      isAnnual ? "text-gray-500" : "text-color-5"
+                    }`}
+                  >
                     Monthly
                   </div>
                 </button>
@@ -85,7 +95,7 @@ const PricingSection: React.FunctionComponent<PricingSectionType> = ({
             </div>
           </div>
           <div className="mq1125:space-y-10 mq800:mb-14 self-stretch flex flex-row items-end justify-center gap-4 max-w-full text-13xl mq1325:flex-wrap mt-10">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map((plan, index) =>
               index < 3 ? (
                 <PricingCard
                   key={index}
@@ -98,35 +108,19 @@ const PricingSection: React.FunctionComponent<PricingSectionType> = ({
               ) : (
                 <div
                   className={`flex-[0.9628] shadow-[0px_4px_9px_rgba(0,_0,_0,_0.05)] mq800:shadow-lg rounded-xl bg-color-5 flex flex-col items-start justify-start py-[54px] px-14 box-border gap-4 min-w-[275px] max-w-full z-[3] text-left text-13xl text-color-3 font-heading-text-inter-semi-bold-24 mq450:py-[35px] mq450:px-5 mq450:box-border mq1325:flex-1 ${className}`}
-
                 >
-                  <div
-                    className="w-[423px] h-[462px] relative shadow-[0px_4px_9px_rgba(0,_0,_0,_0.05)] rounded-xl bg-color-5 hidden max-w-full"
-
-                  />
-                  <div
-                    className="self-stretch flex flex-row items-start justify-center mq800:justify-center py-0  mq450:pl-5 mq450:pr-5 mq450:box-border"
-
-                  >
+                  <div className="w-[423px] h-[462px] relative shadow-[0px_4px_9px_rgba(0,_0,_0,_0.05)] rounded-xl bg-color-5 hidden max-w-full" />
+                  <div className="self-stretch flex flex-row items-start justify-center mq800:justify-center py-0  mq450:pl-5 mq450:pr-5 mq450:box-border">
                     <h2 className="m-0 relative text-inherit leading-[30px] text-center font-medium font-[inherit] z-[1] mq800:text-center mq800:text-7xl mq800:leading-[24px] mq450:text-lgi mq450:leading-[18px]">
                       {plan.title}
                     </h2>
                   </div>
-                  <div
-                    className="self-stretch flex flex-row items-start justify-center mq800:justify-center py-0 pl-0 pr-px text-37xl mq450:pl-5 mq450:pr-5 mq450:box-border"
-
-                  >
-                    <b
-                      className="relative inline-block min-w-[113px] whitespace-nowrap z-[1] mq800:text-center mq800:w-full mq800:text-26xl mq450:text-15xl"
-
-                    >
+                  <div className="self-stretch flex flex-row items-start justify-center mq800:justify-center py-0 pl-0 pr-px text-37xl mq450:pl-5 mq450:pr-5 mq450:box-border">
+                    <b className="relative inline-block min-w-[113px] whitespace-nowrap z-[1] mq800:text-center mq800:w-full mq800:text-26xl mq450:text-15xl">
                       {isAnnual ? plan.annualPrice : plan.monthlyPrice}
                     </b>
                   </div>
-                  <div
-                    className="self-stretch rounded-xl bg-whitesmoke-100 flex flex-col items-start justify-start p-8 gap-8 z-[1] text-lg text-color-6 mq450:gap-4"
-
-                  >
+                  <div className="self-stretch rounded-xl bg-whitesmoke-100 flex flex-col items-start justify-start p-8 gap-8 z-[1] text-lg text-color-6 mq450:gap-4">
                     <div className="w-[311px] h-56 relative rounded-xl bg-whitesmoke-100 hidden" />
                     <div className="flex flex-col items-start justify-start gap-2 mq800:self-center">
                       <div className="flex flex-row items-start justify-start gap-4 mq800:text-center">
@@ -161,12 +155,13 @@ const PricingSection: React.FunctionComponent<PricingSectionType> = ({
                   </div>
                 </div>
               )
-            ))}
+            )}
           </div>
           <div className="mt-5 self-stretch flex flex-row items-start justify-center py-0 pl-5 pr-6 text-color-6  mq800:mb-10 mq800:box-border mq450:pl-5 mq450:pr-5 mq450:box-border mq1325:pl-[168px] mq1325:pr-[170px] mq1325:box-border">
             <div className="h-[60px] relative leading-[30px] flex flex-col items-center justify-center text-center">
               <p className="m-0">
-                All plans include Matched Results, AI Summaries, and One-Click Request.
+                All plans include Matched Results, AI Summaries, and One-Click
+                Request.
               </p>
               <p className="m-0">
                 <span>{`All plans also come with a `}</span>
