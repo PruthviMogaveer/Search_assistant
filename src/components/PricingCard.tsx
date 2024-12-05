@@ -1,5 +1,5 @@
 import React, { useMemo, type CSSProperties } from "react";
-import ButtonGetStarted from "./ButtonGetStarted";
+import ButtonGetStarted from "./buttons/ButtonGetStarted";
 
 export type PricingCardType = {
   className?: string;

@@ -78,7 +78,7 @@ const SAHome: FunctionComponent = () => {
       </section>
       <Hero />
       <ProblemContainer />
-      <div className="w-[100%] mq1125:bg-color/5">
+      <div className="w-[100%] mq1125:bg-color/5 space-y-14 mq1125:space-y-0">
         <Banner />
         <FeatureContainer1 />
         <FeatureContainer2 />
