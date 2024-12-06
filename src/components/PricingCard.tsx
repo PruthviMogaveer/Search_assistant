@@ -7,6 +7,7 @@ export type PricingCardType = {
   prop?: string;
   upTo1MEarnings?: string;
   coverageFor2States?: string;
+  totalPrice?: string;
 
   /** Style props */
   groupDivFlex?: CSSProperties["flex"];
@@ -41,6 +42,7 @@ const PricingCard: React.FunctionComponent<PricingCardType> = ({
   frameDivAlignSelf2,
   upTo1MEarnings,
   coverageFor2States,
+  totalPrice,
   frameDivWidth,
   frameDivWidth1,
 }) => {
@@ -114,7 +116,12 @@ const PricingCard: React.FunctionComponent<PricingCardType> = ({
         >
           {prop}
         </b>
+        <span className="text-lg font-semibold self-end relative bottom-3">/month</span>
       </div>
+      {totalPrice && (
+      <span className="self-stretch relative text-lg font-medium text-center z-[1]">${totalPrice} paid annually</span>
+        
+      )}
       <div
         className="self-stretch rounded-xl bg-whitesmoke-100 flex flex-col items-center justify-center p-8 gap-8 z-[1] text-lg text-color-6 mq450:gap-4"
         style={frameDiv2Style}

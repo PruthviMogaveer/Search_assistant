@@ -37,9 +37,9 @@ const PricingSection: React.FunctionComponent<PricingSectionType> = ({
 
   return (
     <section
-      className={`self-stretch flex flex-row items-start justify-end pt-0 pb-[55px] pl-[69px] pr-[70px] box-border max-w-full shrink-0 text-center text-lg text-color-2 font-heading-text-inter-semi-bold-24  mq800:pb-[23px] mq800:box-border mq1125:px-6 mq1325:pb-9 mq1325:box-border ${className}`}
+      className={` max-w-full self-stretch flex flex-row items-start justify-center pt-0 pb-[55px] pl-[69px] pr-[70px] box-border  shrink-0 text-center text-lg text-color-2 font-heading-text-inter-semi-bold-24  mq800:pb-[23px] mq800:box-border mq1125:px-6 mq1325:pb-9 mq1325:box-border ${className}`}
     >
-      <div className="mq800:mt-10 mq450:mt-10 flex-1 flex flex-col items-start justify-start gap-[88px] shrink-0 max-w-full mq800:gap-11 mq450:gap-[22px]">
+      <div className="max-w-[1559px] mq800:mt-10 mq450:mt-10 flex-1 flex flex-col items-start justify-start gap-[88px] shrink-0  mq800:gap-11 mq450:gap-[22px]">
         <div className="self-stretch flex flex-row items-start justify-center pt-0 px-5 pb-[17px] box-border max-w-full text-29xl">
           <div className="w-[547px] flex flex-col items-start justify-start gap-4 max-w-full">
             <h1 className="m-0 self-stretch relative text-inherit font-semibold font-[inherit] z-[1] mq800:text-19xl mq450:text-10xl">
@@ -103,6 +103,7 @@ const PricingSection: React.FunctionComponent<PricingSectionType> = ({
                   prop={isAnnual ? plan.annualPrice : plan.monthlyPrice}
                   upTo1MEarnings={plan.upTo1MEarnings}
                   coverageFor2States={plan.coverageFor2States}
+                  totalPrice={isAnnual ? String(Number(plan.annualPrice.replace("$", ""))*12) : ""}
                   className={index === 1 ? "relative -top-12 mq1325:top-0" : ""}
                 />
               ) : (

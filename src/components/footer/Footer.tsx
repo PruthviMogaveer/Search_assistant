@@ -1,6 +1,7 @@
 import { FunctionComponent, useMemo, type CSSProperties } from "react";
-import { Link as RouterLink, useLocation } from "react-router-dom";
+import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
+// import Map from "../Map";
 
 export type FooterType = {
   className?: string;
@@ -54,6 +55,7 @@ const Footer: FunctionComponent<FooterType> = ({
   legalLinksWidth,
 }) => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const pricingStyle: CSSProperties = useMemo(() => {
     return {
@@ -136,21 +138,37 @@ const Footer: FunctionComponent<FooterType> = ({
   }, [legalLinksWidth]);
 
   const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    // If on home page, scroll to top
     if (location.pathname === "/") {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
-    // If on another page, the default RouterLink behavior will navigate to home
+  };
+
+  const handleFeatureClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+
+    if (location.pathname === "/pricing") {
+      navigate("/", { state: { scrollToFeature: true } });
+      setTimeout(() => {
+        const featureSection = document.getElementById("Feature");
+        if (featureSection) {
+          featureSection.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      const featureSection = document.getElementById("Feature");
+      if (featureSection) {
+        featureSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }
   };
 
   return (
     <footer
-      className={`self-stretch bg-color-2 flex flex-col items-start justify-start mq1125:justify-center mq1125:items-center py-12 px-[70px] box-border gap-8 max-w-full text-left text-base text-color-5 font-heading-text-inter-semi-bold-24 mq750:gap-4 mq1125:px-6 mq1125: mq750:box-border mq800:items-center mq800:justify-center ${className}`}
+      className={`self-stretch bg-color-2 flex flex-col items-center justify-center mq1125:justify-center mq1125:items-center py-12 px-[70px] box-border gap-8 max-w-full text-left text-base text-color-5 font-heading-text-inter-semi-bold-24 mq750:gap-4 mq1125:px-6 mq1125: mq750:box-border mq800:items-center mq800:justify-center ${className}`}
     >
-      <div className="w-[1440px] h-[294px] relative bg-color-2 hidden max-w-full" />
       <div
-        className="mq800:space-y-6 flex flex-row items-start justify-start mq1125:justify-center mq1125:items-center gap-[147px] max-w-full mq450:gap-[18px] mq750:gap-[37px] mq1275:gap-[73px] mq1275:flex-wrap mq800:flex-col mq800:items-center mq800:justify-center"
+        className="max-w-[1559px] mq800:space-y-6 flex flex-row items-center justify-start mq1125:justify-center mq1125:items-center gap-[147px]  mq450:gap-[18px] mq750:gap-[37px] mq1275:gap-[73px] mq1275:flex-wrap mq800:flex-col mq800:items-center mq800:justify-center"
         style={footerContainerStyle}
       >
         <div
@@ -179,17 +197,13 @@ const Footer: FunctionComponent<FooterType> = ({
               Product
             </div>
             <div className="flex flex-col items-start justify-start gap-2 text-darkgray mq800:items-center">
-              {location.pathname !== "/pricing" && (
-                <ScrollLink
-                  to="Feature"
-                  smooth={true}
-                  duration={500}
-                  className="relative leading-[24px] z-[1] cursor-pointer"
-                  style={featuresStyle}
-                >
-                  Features
-                </ScrollLink>
-              )}
+              <a
+                onClick={handleFeatureClick}
+                className="relative leading-[24px] z-[1] cursor-pointer"
+                style={featuresStyle}
+              >
+                Features
+              </a>
               <RouterLink
                 to="/pricing"
                 className="relative leading-[24px] z-[1] text-inherit no-underline"
@@ -272,25 +286,25 @@ const Footer: FunctionComponent<FooterType> = ({
         </div>
       </div>
       <div
-        className="self-stretch flex flex-col items-start justify-start gap-6 max-w-full text-darkgray mq750:h-auto mq800:items-center"
+        className="max-w-[1559px] w-full flex flex-col items-center justify-center gap-6 text-darkgray mq750:h-auto"
         style={legalStyle}
       >
         <img
-          className="self-stretch relative max-w-full overflow-hidden max-h-full z-[1] mq800:max-w-[90%]"
+          className="self-stretch max-w-full overflow-hidden max-h-full"
           alt=""
           src={divider}
         />
-        <div className="self-stretch flex flex-row items-start justify-between shrink-0 gap-5 max-w-full mq750:flex-wrap mq800:flex-col mq800:items-center mq800:text-center">
-          <div className="relative leading-[20px] inline-block max-w-full z-[1]">
+        <div className="w-full flex items-center justify-between mq800:flex-col gap-5 text-center">
+          <div className="leading-[20px]">
             © 2024 Search Assistant, Inc. All rights reserved.
           </div>
           <div
-            className="flex flex-row items-start justify-start gap-[54px] mq450:gap-[27px] mq800:flex-row mq800:items-center"
+            className="flex items-center justify-center mq800:flex-col gap-[54px] mq450:gap-[27px] mq800:gap-5"
             style={legalLinksStyle}
           >
-            <a className="[text-decoration:none] relative leading-[20px] text-[inherit] z-[1]">{`Terms & Conditions`}</a>
+            <a className="[text-decoration:none] leading-[20px] text-[inherit]">{`Terms & Conditions`}</a>
             <a
-              className="[text-decoration:none] relative leading-[20px] text-[inherit] z-[1]"
+              className="[text-decoration:none] leading-[20px] text-[inherit]"
               style={privacyPolicyStyle}
             >
               Privacy Policy
@@ -298,6 +312,7 @@ const Footer: FunctionComponent<FooterType> = ({
           </div>
         </div>
       </div>
+      {/* <Map/> */}
     </footer>
   );
 };

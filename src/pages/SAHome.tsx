@@ -8,14 +8,14 @@ import SpecialPricing from "../components/SpecialPricing";
 import VideoDemo from "../components/VideoDemo";
 import Testimonials from "../components/Testimonials";
 import Contact from "../components/Contact";
-import Footer from "../components/footer/Footer"
+import Footer from "../components/footer/Footer";
 import TopNavigation from "../components/navigation/TopNavigation";
 import Hero from "../components/hero/Hero";
 import Banner from "../components/Banner";
 
 const SAHome: FunctionComponent = () => {
   return (
-    <div className="w-full relative bg-color-5 overflow-hidden flex flex-col items-start justify-start gap-24 leading-[normal] tracking-[normal] text-left text-45xl text-color-2 font-heading-text-inter-semi-bold-24 mq450:gap-6 mq750:gap-12">
+    <div className="w-full relative bg-color-5 overflow-hidden flex flex-col mq1325:items-start mq1325:justify-start justify-center items-center gap-24 leading-[normal] tracking-[normal] text-left text-45xl text-color-2 font-heading-text-inter-semi-bold-24 mq450:gap-6 mq750:gap-12">
       <TopNavigation
         sALogo1="/sa-logo-1@2x.png"
         topNavigationFlex="unset"
@@ -57,7 +57,12 @@ const SAHome: FunctionComponent = () => {
       {/* <div className="w-[532.4px] h-[545.8px] absolute !m-[0] bottom-[2817.4px] left-[-417px] [filter:blur(1000px)] rounded-[50%] bg-color" /> */}
       <section className="self-stretch h-[1206.6px] absolute !m-[0] w-[111.11%] top-[0px] right-[-11.11%] left-[0%]">
         <img
-          className="absolute top-[0px] left-[-54px] w-[1600px] h-[870.8px]"
+          className="absolute top-[0px] left-0 w-[1600px]  h-[870.8px]"
+          alt=""
+          src="/background.svg"
+        />
+        <img
+          className="absolute top-0 rotate-180 left-[1600px] w-[1600px]  h-[870.8px]"
           alt=""
           src="/background.svg"
         />
@@ -69,25 +74,21 @@ const SAHome: FunctionComponent = () => {
           alt=""
           src="/mask-group@2x.png"
         /> */}
-        <img
-          className="absolute top-[252px] right-56 mq1325:right-48 mq1275:right-40 w-[45rem] h-[446.5px] object-contain z-[2] mq1125:hidden"
-          loading="lazy"
-          alt=""
-          src="/HeroImg.png"
-        />
       </section>
       <Hero />
-      <ProblemContainer />
-      <div className="w-[100%] mq1125:bg-color/5 space-y-14 mq1125:space-y-0">
-        <Banner />
-        <FeatureContainer1 />
-        <FeatureContainer2 />
-        <FeatureContainer3 />
-        <SpecialPricing />
-      </div>
-      <VideoDemo />
-      <section className="self-stretch flex flex-col items-start justify-start gap-12 max-w-full mq750:gap-6">
 
+      <ProblemContainer />
+      
+        <Banner />
+        <div className="w-screen mq1125:bg-color/5 mq1125:-mt-[9rem] mq1125:pt-32 space-y-14 mq1125:space-y-0 max-w-[1559px]">
+          <FeatureContainer1 />
+          <FeatureContainer2 />
+          <FeatureContainer3 />
+          <SpecialPricing />
+        </div>
+      
+      <VideoDemo />
+      <section className="self-stretch flex flex-col items-center justify-start gap-12 max-w-full mq750:gap-6">
         <Testimonials />
         <div id="contact">
           <Contact
