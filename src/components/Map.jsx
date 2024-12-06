@@ -1,64 +1,130 @@
-import React, { useState } from 'react';
-import usStatesData from "../data/states.json";
+import React, { useState } from "react";
+import { ComposableMap, Geographies, Geography } from "react-simple-maps";
+import { scaleLinear } from "d3-scale";
 
-// Comprehensive US States path data with initial percentages
+// GeoJSON for the US map
+const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas/states-10m.json";
 
+const USMap = () => {
+  const [tooltipContent, setTooltipContent] = useState("");
 
-const USPercentageMap = () => {
-  const [stateData, setStateData] = useState(
-    Object.fromEntries(
-      Object.entries(usStatesData).map(([stateId, stateInfo]) => [stateId, stateInfo.percentage])
-    )
-  );
-
-  const [hoveredState, setHoveredState] = useState(null);
-
-  // Color function based on percentage
-  const getColorForPercentage = (percentage) => {
-    if (percentage === undefined) return 'rgba(200,200,255,0.5)';
-    
-    // Gradient from light blue to dark blue
-    const intensity = Math.floor((percentage / 100) * 255);
-    return `rgb(${255 - intensity}, ${255 - intensity}, 255)`;
+  const dummyData = {
+    "Alabama": "35%",
+    "Alaska": "42%",
+    "Arizona": "28%",
+    "Arkansas": "31%",
+    "California": "50%",
+    "Colorado": "39%",
+    "Connecticut": "44%",
+    "Delaware": "37%",
+    "Florida": "48%",
+    "Georgia": "36%",
+    "Hawaii": "45%",
+    "Idaho": "29%",
+    "Illinois": "41%",
+    "Indiana": "32%",
+    "Iowa": "30%",
+    "Kansas": "33%",
+    "Kentucky": "34%",
+    "Louisiana": "38%",
+    "Maine": "40%",
+    "Maryland": "46%",
+    "Massachusetts": "49%",
+    "Michigan": "43%",
+    "Minnesota": "35%",
+    "Mississippi": "27%",
+    "Missouri": "36%",
+    "Montana": "26%",
+    "Nebraska": "28%",
+    "Nevada": "39%",
+    "New Hampshire": "47%",
+   "New Jersey": "51%",
+    "New Mexico": "30%",
+    "New York": "52%",
+    "North Carolina": "37%",
+    "North Dakota": "25%",
+    "Ohio": "38%",
+    "Oklahoma": "29%",
+    "Oregon": "40%",
+    "Pennsylvania": "42%",
+    "Rhode Island": "45%",
+    "South Carolina": "33%",
+    "South Dakota": "27%",
+    "Tennessee": "34%",
+    "Texas": "50%",
+    "Utah": "28%",
+    "Vermont": "48%",
+    "Virginia": "44%",
+    "Washington": "49%",
+    "West Virginia": "30%",
+    "Wisconsin": "41%",
+    "Wyoming": "26%",
   };
 
+  // Create a color scale based on percentage
+  const colorScale = scaleLinear()
+    .domain([25, 52]) // Min and max percentage values
+    .range(["#FFEDA0", "#F03B20"]); // Gradient from light yellow to red
+
+  const handleMouseEnter = (geo) => {
+    const { name } = geo.properties;
+    setTooltipContent(`${name}: ${dummyData[name] || "N/A"}`);
+  };
+
+  const handleMouseLeave = () => {
+    setTooltipContent("");
+  };
 
   return (
-    <div className="w-full h-[600px] relative">
-      <svg 
-        viewBox="0 0 800 600" 
-        xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-full"
+    <div style={{ width: "100%", height: "600px" }}>
+      <div style={{ marginBottom: "10px", fontWeight: "bold" }}>
+        {tooltipContent || "Hover over a state"}
+      </div>
+      <ComposableMap
+        projection="geoAlbersUsa"
+        projectionConfig={{
+          scale: 1000, // Increase the scale to make the map larger
+        }}
+        style={{
+          width: "100%",
+          height: "100%",
+        }}
       >
-        {Object.entries(usStatesData).map(([stateId, stateInfo]) => {
-          const percentage = stateData[stateId];
-          
-          return (
-            <path
-              key={stateId}
-              d={stateInfo.path}
-              fill={getColorForPercentage(percentage)}
-              stroke="#FFFFFF"
-              strokeWidth="1.5"
-              onMouseEnter={() => setHoveredState(stateId)}
-              onMouseLeave={() => setHoveredState(null)}
-              className="transition-all duration-200 ease-in-out cursor-pointer hover:stroke-black hover:stroke-2"
-            />
-          );
-        })}
-      </svg>
+        <Geographies geography={geoUrl}>
+          {({ geographies }) =>
+            geographies.map((geo) => {
+              const { name } = geo.properties;
+              const percentage = parseFloat(dummyData[name]?.replace("%", "")) || 0;
+              const fillColor = colorScale(percentage); // Get color based on percentage
 
-      {/* Hover info display */}
-      {hoveredState && (
-        <div className="absolute bottom-4 left-4 bg-white p-2 rounded shadow-lg text-black">
-          <strong>{usStatesData[hoveredState].name} ({hoveredState})</strong>: 
-          {stateData[hoveredState] !== undefined 
-            ? `${stateData[hoveredState]}%` 
-            : 'No data'}
-        </div>
-      )}
+              return (
+                <Geography
+                  key={geo.rsmKey}
+                  geography={geo}
+                  onMouseEnter={() => handleMouseEnter(geo)}
+                  onMouseLeave={handleMouseLeave}
+                  style={{
+                    default: {
+                      fill: fillColor,
+                      outline: "none",
+                    },
+                    hover: {
+                      fill: "#F53",
+                      outline: "none",
+                    },
+                    pressed: {
+                      fill: "#E42",
+                      outline: "none",
+                    },
+                  }}
+                />
+              );
+            })
+          }
+        </Geographies>
+      </ComposableMap>
     </div>
   );
 };
 
-export default USPercentageMap;
+export default USMap;
