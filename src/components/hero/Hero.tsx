@@ -3,7 +3,7 @@ import ButtonCTA from "../buttons/ButtonCTA";
 
 const Hero: FunctionComponent = () => {
   return (
-    <div className="mq1125:mt-8 w-full flex flex-row items-start justify-start pt-0 px-[70px] pb-[99px] box-border max-w-full mq750:pb-16 mq750:box-border  mq800:px-6 mq1100:box-border">
+    <div className="max-w-[1559px] mq1125:mt-8 w-full flex flex-row items-start justify-start pt-0 px-[70px] pb-[99px] box-border mq750:pb-16 mq750:box-border  mq800:px-6 mq1100:box-border">
       <div className="flex-1 flex flex-row items-end justify-start mq1125:items-center mq1125:justify-center max-w-full [row-gap:20px] mq750:flex-wrap">
         <div className="flex-1 flex flex-col items-start justify-start mq1125:items-center mq1125:justify-center gap-6 min-w-[379px] shrink-0 max-w-full mq750:min-w-full">
           <h1 className=" m-0 self-stretch relative text-inherit capitalize z-[2] font-[inherit] mq450:text-19xl mq750:text-32xl mq1125:text-center mq1125:-mb-8">
@@ -16,7 +16,9 @@ const Hero: FunctionComponent = () => {
               <b>Ownership.</b>
             </p>
           </h1>
-         
+          <div className="w-[317px] mq1125:mt-10 mq1125:-mb-5 relative text-lg leading-[150%] text-color-3 inline-block z-[1] mq1125:text-center">
+            Use the Deal Flow Assistant built for individual business buyers.
+          </div>
             <img
               className="relative w-full object-contain z-[2] mq1125:flex  hidden"
               loading="lazy"
@@ -24,9 +26,7 @@ const Hero: FunctionComponent = () => {
               src="/HeroSmall.svg"
             />
           
-          <div className="w-[317px] relative text-lg leading-[150%] text-color-3 inline-block z-[1] mq1125:text-center">
-            Use the Deal Flow Assistant built for individual business buyers.
-          </div>
+          
           <ButtonCTA requestAccessTextDecoration="unset" className="relative "/>
         </div>
         {/* <div className=" h-[205px] flex flex-col items-start justify-end pt-0 px-0 pb-[39px] box-border relative left-20 text-center text-5xl text-main-color-1 mq750:flex-1 mq750:ml-0 mq800:absolute mq800:hidden">
@@ -84,6 +84,12 @@ const Hero: FunctionComponent = () => {
           </div>
         </div> */}
       </div>
+      <img
+          className="mq1325:absolute relative mq1325:top-[252px] right-18 mq1325:right-5 mq1275:right-5 w-[45rem] h-[446.5px] object-contain z-[2] mq1125:hidden"
+          loading="lazy"
+          alt=""
+          src="/HeroImg.png"
+        />
     </div>
   );
 };

@@ -1,0 +1,52 @@
+{
+    "AL": {
+        "path": "M582.8,458.7l-2.1-38.2...",
+        "name": "Alabama",
+        "percentage": 75
+    },
+    "AK": {
+        "path": "M107.4,469.5c5.4,1.9...",
+        "name": "Alaska",
+        "percentage": 60
+    },
+    "AZ": {
+        "path": "M203.1,398.9l-1.3-57.5...",
+        "name": "Arizona",
+        "percentage": 45
+    },
+    "AR": {
+        "path": "M492.4,368.7l-11.9,3.9...",
+        "name": "Arkansas",
+        "percentage": 70
+    },
+    "CA": {
+        "path": "M124.1,255.7l33.9-14.6...",
+        "name": "California",
+        "percentage": 85
+    },
+    "CO": {
+        "path": "M332.8,317.4l-25.3-19.4...",
+        "name": "Colorado",
+        "percentage": 65
+    },
+    "CT": {
+        "path": "M713.4,222.2l-25.3-19.4...",
+        "name": "Connecticut",
+        "percentage": 55
+    },
+    "DE": {
+        "path": "M683.4,252.2l-25.3-19.4...",
+        "name": "Delaware",
+        "percentage": 50
+    },
+    "FL": {
+        "path": "M582.8,458.7l-2.1-38.2...",
+        "name": "Florida",
+        "percentage": 90
+    },
+    "GA": {
+        "path": "M582.8,458.7l-2.1-38.2...",
+        "name": "Georgia",
+        "percentage": 80
+    }
+}

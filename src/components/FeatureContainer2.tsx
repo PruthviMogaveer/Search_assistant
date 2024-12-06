@@ -9,7 +9,7 @@ const FeatureContainer2: FunctionComponent<FeatureContainer2Type> = ({
 }) => {
   return (
     <section
-      className={`self-stretch flex flex-row items-start justify-start mq1125:justify-center mq1125:items-center pt-0 px-[70px] mq1125:px-6 pb-[49px] box-border max-w-full text-left text-13xl text-color-2 font-heading-text-inter-semi-bold-24 mq750:pb-8 mq750:box-border ${className}`}
+      className={`max-w-[1559px] self-stretch flex flex-row items-start justify-start mq1125:justify-center mq1125:items-center pt-0 px-[70px] mq1125:px-6 pb-[49px] box-border  text-left text-13xl text-color-2 font-heading-text-inter-semi-bold-24 mq750:pb-8 mq750:box-border ${className}`}
     >
       
       <div className=" flex-1 flex flex-row items-end justify-start mq1125:justify-center mq1125:items-center pt-14 px-[110px] mq1125:px-100  pb-[57px] box-border relative gap-[303.5px] max-w-full z-[1] mq450:gap-[38px] mq750:gap-[76px] mq750:pt-9 mq800:px-0 mq800:ml-0 mq750:pb-[37px] mq750:box-border mq1275:gap-[152px] mq1275:flex-wrap mq1275:justify-center mq1275:pl-[55px] mq1275:pr-[55px] mq1275:box-border">

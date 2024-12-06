@@ -47,11 +47,11 @@ const Contact: FunctionComponent<ContactType> = ({
 
   return (
     <div
-      className={`w-[1412px] mq800:w-screen flex flex-row items-start justify-center py-0 px-5 box-border max-w-full text-center text-21xl text-color-2 font-heading-text-inter-semi-bold-24 ${className}`}
+      className={`max-w-[1559px] w-[1412px] mq800:w-screen flex flex-row items-start justify-center py-0 px-5 box-border  text-center text-21xl text-color-2 font-heading-text-inter-semi-bold-24 ${className}`}
     >
-      <div className="w-[1052px] flex flex-row items-start justify-between gap-5 max-w-full mq800:flex-col mq800:items-center">
+      <div className="w-[1052px] flex flex-row items-start justify-between gap-5 max-w-full mq1125:flex-col mq1125:items-center">
         <div
-          className="w-[283px] flex flex-col items-start justify-start mq800:items-center mq800:text-center mq800:w-full"
+          className="w-[283px] flex flex-col items-start justify-start mq1125:items-center mq1125:text-center mq1125:w-full"
           style={contactHeaderStyle}
         >
           <h1

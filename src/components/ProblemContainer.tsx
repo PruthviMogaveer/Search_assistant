@@ -9,9 +9,9 @@ const ProblemContainer: FunctionComponent<ProblemContainerType> = ({
 }) => {
   return (
     <section
-      className={`mq1125:-mt-16 mq800:-mt-5 mq800:w-[86%] w-full flex flex-row items-start justify-start mq1125:items-center mq1125:justify-center pt-0 px-[70px] mq800:pl-0 mq800:pr-0 mq800:px-6 pb-4 box-border max-w-full  text-29xl text-color-2 font-heading-text-inter-semi-bold-24  mq1275:box-border ${className}`}
+      className={`max-w-[1559px] mq1125:-mt-16 mq800:-mt-5 mq800:w-[86%] w-full flex flex-row items-start justify-start mq1125:items-center mq1125:justify-center pt-0 px-[70px] mq800:pl-0 mq800:pr-0 mq800:px-6 pb-4 box-border text-29xl text-color-2 font-heading-text-inter-semi-bold-24  mq1275:box-border ${className}`}
     >
-      <div className="flex-1 flex flex-row  mq1125:flex-col items-start justify-start mq1125:justify-center mq1125:items-center gap-[15rem] mq1325:gap-[5rem]  max-w-full mq450:gap-[22px] mq750:gap-[43px] mq1100:flex-wrap mq1275:gap-[2rem] mq1125:gap-[5rem]  ">
+      <div className="flex-1 flex flex-row  mq1125:flex-col items-start justify-start mq1125:justify-center mq1125:items-center gap-[5rem]   max-w-full mq450:gap-[22px] mq750:gap-[43px] mq1100:flex-wrap mq1275:gap-[2rem] mq1325:gap-[5rem] mq1125:gap-[5rem]  ">
         <div className="flex-1 mq800:pl-[30px]  flex flex-col items-start justify-start mq1125:items-center mq1125:justify-center gap-4 min-w-[35rem] max-w-full mq750:min-w-full">
           <h1 className="m-0 self-stretch relative text-inherit font-semibold font-[inherit] mq450:text-10xl mq750:text-19xl mq1125:text-center">
             <p className="m-0">{`Why is buying a `}</p>
