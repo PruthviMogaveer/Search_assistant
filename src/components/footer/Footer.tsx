@@ -1,7 +1,6 @@
 import { FunctionComponent, useMemo, type CSSProperties } from "react";
 import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
-// import Map from "../Map";
 
 export type FooterType = {
   className?: string;
@@ -319,7 +318,6 @@ const Footer: FunctionComponent<FooterType> = ({
           </div>
         </div>
       </div>
-      {/* <Map/> */}
     </footer>
   );
 };
