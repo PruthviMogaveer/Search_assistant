@@ -39,7 +39,8 @@ const Testimonials: FunctionComponent<TestimonialsHomeType> = ({
 
   const prevTestimonial = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + testimonialData.length) % testimonialData.length
+      (prevIndex) =>
+        (prevIndex - 1 + testimonialData.length) % testimonialData.length
     );
   };
 
@@ -87,7 +88,7 @@ const Testimonials: FunctionComponent<TestimonialsHomeType> = ({
             />
           </div>
         </div>
-      </div> 
+      </div>
       <div className="max-w-[1559px] relative w-full flex items-center justify-between">
         <button
           onClick={prevTestimonial}
@@ -99,7 +100,11 @@ const Testimonials: FunctionComponent<TestimonialsHomeType> = ({
         </button>
         <div
           className="flex flex-row items-start justify-start py-0 box-border gap-4 z-[1] text-left text-lg text-color-3 overflow-x-auto snap-x snap-mandatory"
-          style={{ scrollSnapType: "x mandatory", scrollBehavior: "smooth", width: "calc(100% - 120px)" }} // Adjust the width to accommodate buttons
+          style={{
+            scrollSnapType: "x mandatory",
+            scrollBehavior: "smooth",
+            width: "calc(100% - 120px)",
+          }} // Adjust the width to accommodate buttons
         >
           {visibleTestimonials().map((testimonial, index) => (
             <div
@@ -109,13 +114,13 @@ const Testimonials: FunctionComponent<TestimonialsHomeType> = ({
               <div className="relative leading-[30px] mq800:text-[16px]">
                 {testimonial.text}
               </div>
-              <div className="flex flex-row items-center justify-between w-full py-0 pl-0 pr-[15px] text-color-2 mq450:gap-[8px] mq750:flex-wrap mq800:flex-row">
-                <div className="flex flex-row items-center justify-start py-0 px-1 box-border gap-4 mq800:gap-2">
+              <div className="flex flex-row items-center justify-between w-full py-0 pl-0 pr-[15px] text-color-2 mq450:gap-[8px] mq450:pr-0 mq750:flex-wrap mq800:flex-row">
+                <div className="flex flex-row items-start justify-start py-0 px-1 mq800:-mx-6 box-border gap-4 mq800:gap-2">
                   <div className="h-14 w-14 relative mq800:h-10 mq800:w-10">
-                    <div className="absolute top-[0px] left-[0px] rounded-[50%] bg-gainsboro-300 w-full h-full flex justify-center items-center">
+                    <div className="absolute top-[0px] left-[0px] rounded-[50%] w-14 h-14 flex justify-center items-center">
                       {testimonial.profileImg ? (
                         <img
-                          className="relative w-14 h-14 overflow-hidden z-[1] mq800:w-10 mq800:h-10"
+                          className="relative w-auto h-auto overflow-hidden z-[1] mq800:w-10 mq800:h-10"
                           loading="lazy"
                           alt=""
                           src={testimonial.profileImg}

@@ -20,7 +20,7 @@ const ProblemContainer: FunctionComponent<ProblemContainerType> = ({
           </h1>
         <div className="absolute top-[55rem] hidden mq1125:block right-[-567px] [filter:blur(1000px)] rounded-[50%] bg-color w-[634px] h-[650px] z-[1]" />
           
-          <div className="w-[550px] relative text-lg mq800:text-[16px] leading-[30px] text-color-6 inline-block max-w-full mq1125:text-center">
+          <div className="w-[550px] relative text-lg mq800:text-[16px] leading-[30px] text-color-3 inline-block max-w-full mq1125:text-center">
             Business acquisitions will always be complex - that's the nature of
             buying a company. But finding and engaging with the right
             opportunities needs an upgrade.
@@ -42,7 +42,7 @@ const ProblemContainer: FunctionComponent<ProblemContainerType> = ({
                 <h3 className="m-0 relative text-inherit leading-[28px] font-semibold font-[inherit] inline-block max-w-full z-[2] mq450:text-3xl mq450:leading-[22px]">
                   You want to review deals
                 </h3>
-                <div className="relative text-lg leading-[30px] text-color-6 z-[2] mq800:text-[16px]">
+                <div className="relative text-lg leading-[30px] text-color-3 z-[2] mq800:text-[16px]">
                   But they are spread far and wide, often on websites that were built in the 90s.
                 </div>
               </div>
@@ -62,7 +62,7 @@ const ProblemContainer: FunctionComponent<ProblemContainerType> = ({
                 <h3 className="m-0 relative text-inherit font-semibold font-[inherit] inline-block max-w-full z-[2] mq450:text-3xl">
                   You want to review relevant, new deals
                 </h3>
-                <div className="relative text-lg leading-[30px] text-color-6 z-[2] mq800:text-[16px]">
+                <div className="relative text-lg leading-[30px] text-color-3 z-[2] mq800:text-[16px]">
                   But you are stuck sorting through junk listings along with the dozen other deals you reviewed last week.
                 </div>
               </div>
@@ -81,7 +81,7 @@ const ProblemContainer: FunctionComponent<ProblemContainerType> = ({
                 <h3 className="m-0 relative text-inherit font-semibold font-[inherit] inline-block max-w-full z-[2] mq450:text-3xl">
                   You want to fast-forward to truly engaging on a deal
                 </h3>
-                <div className="relative text-lg leading-[30px] text-color-6 mq800:text-[16px]">
+                <div className="relative text-lg leading-[30px] text-color-3 mq800:text-[16px]">
                   But instead, you have to go through the same basic onboarding process just to learn more.
                 </div>
               </div>

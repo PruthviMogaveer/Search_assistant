@@ -53,7 +53,7 @@ const FeatureContainer3: FunctionComponent<FeatureContainer3Type> = ({
                   <div className="relative leading-[32px] font-medium mq450:text-lgi mq450:leading-[26px]">
                     One-Click Request
                   </div>
-                  <div className="self-stretch flex flex-row items-start justify-start gap-2 max-w-full text-lg text-color-6">
+                  <div className="self-stretch flex flex-row items-start justify-start gap-2 max-w-full text-lg text-color-3">
                     <div className="flex flex-col items-start justify-start pt-[9.5px] px-0 pb-0">
                       <img
                         className="w-4 h-4 relative mq800:w-3 mq800:h-3"
@@ -65,7 +65,7 @@ const FeatureContainer3: FunctionComponent<FeatureContainer3Type> = ({
                       Rather than sending you away to request information on a deal, our One-Click Request feature takes that step for you.
                     </div>
                   </div>
-                  <div className="self-stretch flex flex-row items-start justify-start gap-2 text-lg text-color-6 w-full">
+                  <div className="self-stretch flex flex-row items-start justify-start gap-2 text-lg text-color-3 w-full">
                     <div className="flex flex-col items-start justify-start pt-2 px-0 pb-0">
                       <img
                         className="w-4 h-4 relative mq800:w-3 mq800:h-3"
@@ -93,7 +93,7 @@ const FeatureContainer3: FunctionComponent<FeatureContainer3Type> = ({
                   <div className="relative leading-[32px] font-medium inline-block max-w-full mq450:text-lgi mq450:leading-[26px]">
                     Committed to building for Individual Buyers
                   </div>
-                  <div className="self-stretch flex flex-row items-start justify-start gap-2 max-w-full text-lg text-color-6">
+                  <div className="self-stretch flex flex-row items-start justify-start gap-2 max-w-full text-lg text-color-3">
                     <div className="flex flex-col items-start justify-start pt-[9.2px] px-0 pb-0">
                       <img
                         className="w-4 h-4 relative mq800:w-3 mq800:h-3"
@@ -105,7 +105,7 @@ const FeatureContainer3: FunctionComponent<FeatureContainer3Type> = ({
                       Search Assistant is focused on empowering the individual business buyer, and we will continue to innovate with you in mind.
                     </div>
                   </div>
-                  <div className="self-stretch flex flex-row items-start justify-start gap-2 text-lg text-color-6 w-full">
+                  <div className="self-stretch flex flex-row items-start justify-start gap-2 text-lg text-color-3 w-full">
                     <div className="flex flex-col items-start justify-start pt-2 px-0 pb-0">
                       <img
                         className="w-4 h-4 relative mq800:w-3 mq800:h-3"
@@ -117,7 +117,7 @@ const FeatureContainer3: FunctionComponent<FeatureContainer3Type> = ({
                       That could mean integrating directly into your CRM, automating further administrative burdens like Buyer Profiles and NDAs, or perhaps something else we haven't thought of yet.
                     </div>
                   </div>
-                  <div className="self-stretch flex flex-row items-start justify-start gap-2 text-lg text-color-6 w-full">
+                  <div className="self-stretch flex flex-row items-start justify-start gap-2 text-lg text-color-3 w-full">
                     <div className="flex flex-col items-start justify-start pt-2 px-0 pb-0">
                       <img
                         className="w-4 h-4 relative mq800:w-3 mq800:h-3"

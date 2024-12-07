@@ -163,6 +163,12 @@ const Footer: FunctionComponent<FooterType> = ({
     }
   };
 
+  const handlePrivacyPolicyClick = (e : React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.open("/privacy-policy", "_blank");
+  };
+
+
   return (
     <footer
       className={`self-stretch bg-color-2 flex flex-col items-center justify-center mq1125:justify-center mq1125:items-center py-12 px-[70px] box-border gap-8 max-w-full text-left text-base text-color-5 font-heading-text-inter-semi-bold-24 mq750:gap-4 mq1125:px-6 mq1125: mq750:box-border mq800:items-center mq800:justify-center ${className}`}
@@ -218,12 +224,12 @@ const Footer: FunctionComponent<FooterType> = ({
               Company
             </div>
             <div className="flex flex-col items-start justify-start gap-2 text-darkgray mq800:items-center">
-              <a
+              {/* <a
                 className="[text-decoration:none] relative leading-[24px] text-[inherit] inline-block min-w-[47px] z-[1]"
                 style={aboutStyle}
               >
                 About
-              </a>
+              </a> */}
               <ScrollLink
                 to="contact"
                 smooth={true}
@@ -302,10 +308,11 @@ const Footer: FunctionComponent<FooterType> = ({
             className="flex items-center justify-center mq800:flex-col gap-[54px] mq450:gap-[27px] mq800:gap-5"
             style={legalLinksStyle}
           >
-            <a className="[text-decoration:none] leading-[20px] text-[inherit]">{`Terms & Conditions`}</a>
+            {/* <a className="[text-decoration:none] leading-[20px] text-[inherit]">{`Terms & Conditions`}</a> */}
             <a
               className="[text-decoration:none] leading-[20px] text-[inherit]"
               style={privacyPolicyStyle}
+              onClick={handlePrivacyPolicyClick}
             >
               Privacy Policy
             </a>

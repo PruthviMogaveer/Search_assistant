@@ -45,7 +45,7 @@ const PricingSection: React.FunctionComponent<PricingSectionType> = ({
             <h1 className="m-0 self-stretch relative text-inherit font-semibold font-[inherit] z-[1] mq800:text-19xl mq450:text-10xl">
               Choose the Plan That's Right For You
             </h1>
-            <div className="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full text-lg text-color-6  mq800:box-border mq450:pl-5 mq450:pr-5 mq450:box-border">
+            <div className="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full text-lg text-color-3  mq800:box-border mq450:pl-5 mq450:pr-5 mq450:box-border">
               <div className="w-[357px]  relative leading-[30px] inline-block max-w-full z-[1]">
                 Join today to get the Deal Flow Assistant built for individual
                 business buyers.
@@ -127,7 +127,7 @@ const PricingSection: React.FunctionComponent<PricingSectionType> = ({
                       {isAnnual ? plan.annualPrice : plan.monthlyPrice}
                     </b>
                   </div>
-                  <div className="self-stretch rounded-xl bg-whitesmoke-100 flex flex-col items-start justify-start p-8 gap-8 z-[1] text-lg text-color-6 mq450:gap-4">
+                  <div className="self-stretch rounded-xl bg-whitesmoke-100 flex flex-col items-start justify-start p-8 gap-8 z-[1] text-lg text-color-3 mq450:gap-4">
                     <div className="w-[311px] h-56 relative rounded-xl bg-whitesmoke-100 hidden" />
                     <div className="flex flex-col items-start justify-start gap-2 mq800:self-center">
                       <div className="flex flex-row items-start justify-start gap-4 mq800:text-center">
@@ -164,7 +164,7 @@ const PricingSection: React.FunctionComponent<PricingSectionType> = ({
               )
             )}
           </div>
-          <div className="mt-5 self-stretch flex flex-row items-start justify-center py-0 pl-5 pr-6 text-color-6  mq800:mb-10 mq800:box-border mq450:pl-5 mq450:pr-5 mq450:box-border mq1325:pl-[168px] mq1325:pr-[170px] mq1325:box-border">
+          <div className="mt-5 self-stretch flex flex-row items-start justify-center py-0 pl-5 pr-6 text-color-3  mq800:mb-10 mq800:box-border mq450:pl-5 mq450:pr-5 mq450:box-border mq1325:pl-[168px] mq1325:pr-[170px] mq1325:box-border">
             <div className="h-[60px] relative leading-[30px] flex flex-col items-center justify-center text-center">
               <p className="m-0">
                 All plans include Matched Results, AI Summaries, and One-Click
@@ -173,7 +173,7 @@ const PricingSection: React.FunctionComponent<PricingSectionType> = ({
               <p className="m-0">
                 <span>{`All plans also come with a `}</span>
                 <span className="text-color">free 14 day trial</span>
-                <span className="text-color-6">.</span>
+                <span className="text-color-3">.</span>
               </p>
             </div>
           </div>

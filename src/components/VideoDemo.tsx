@@ -14,7 +14,7 @@ const VideoDemo: FunctionComponent<VideoDemoType> = ({ className = "" }) => {
         <h1 className="m-0 self-stretch relative text-inherit font-semibold font-[inherit] mq450:text-5xl mq750:text-13xl">
           Experience Search Assistant in Action
         </h1>
-        <div className="self-stretch flex flex-row items-start justify-start py-0 pl-[46px] pr-[47px] box-border max-w-full text-base text-color-6 mq750:pl-[23px] mq750:pr-[23px] mq750:box-border">
+        <div className="self-stretch flex flex-row items-start justify-start py-0 pl-[46px] pr-[47px] box-border max-w-full text-base text-color-3 mq750:pl-[23px] mq750:pr-[23px] mq750:box-border">
           <div className="flex-1 flex flex-col items-center justify-start gap-6  max-w-full">
             <div className="self-stretch flex flex-col items-start justify-start gap-8 mq1125:gap-5 ">
               <div className="self-stretch flex flex-row items-start justify-start py-0 px-20 mq800:px-1 mq800:mt-4 mq750:box-border">
