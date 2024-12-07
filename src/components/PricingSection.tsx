@@ -41,7 +41,7 @@ const PricingSection: React.FunctionComponent<PricingSectionType> = ({
     >
       <div className="max-w-[1559px] mq800:mt-10 mq450:mt-10 flex-1 flex flex-col items-start justify-start gap-[88px] shrink-0  mq800:gap-11 mq450:gap-[22px]">
         <div className="self-stretch flex flex-row items-start justify-center pt-0 px-5 pb-[17px] box-border max-w-full text-29xl">
-          <div className="w-[547px] mq450:max-w-[300px] flex flex-col items-start justify-start gap-4 ">
+          <div className="w-[547px] mq450:max-w-[300px] mq750:max-w-[500px] flex flex-col items-start justify-start gap-4 ">
             <h1 className="m-0 self-stretch relative text-inherit font-semibold font-[inherit] z-[1] mq800:text-19xl mq450:text-10xl">
               Choose the Plan That's Right For You
             </h1>
@@ -54,7 +54,9 @@ const PricingSection: React.FunctionComponent<PricingSectionType> = ({
           </div>
         </div>
 
-        <div className={` self-stretch flex flex-col items-start justify-start gap-[72px] max-w-full text-left text-color-3 mq800:gap-9 mq450:gap-[18px]`}>
+        <div
+          className={` self-stretch flex flex-col items-start justify-start gap-[72px] max-w-full text-left text-color-3 mq800:gap-9 mq450:gap-[18px]`}
+        >
           <div className="mq450:mt-10 self-stretch flex flex-row items-start justify-center py-0  box-border max-w-full ">
             <div className="shadow-[0px_4px_9px_rgba(0,_0,_0,_0.05)] mq1125:mt-10 rounded-3xs mq800:rounded-lg bg-color-5 flex flex-row items-start justify-start py-[7px] mq1125:py-1 px-[7px] mq800:px-1  box-border gap-7 mq800:gap-2 max-w-full z-[3] mq800:flex-wrap">
               <div className="h-[72px]  relative shadow-[0px_4px_9px_rgba(0,_0,_0,_0.05)] rounded-3xs bg-color-5 hidden max-w-full" />
@@ -103,8 +105,12 @@ const PricingSection: React.FunctionComponent<PricingSectionType> = ({
                   prop={isAnnual ? plan.annualPrice : plan.monthlyPrice}
                   upTo1MEarnings={plan.upTo1MEarnings}
                   coverageFor2States={plan.coverageFor2States}
-                  totalPrice={isAnnual ? String(Number(plan.annualPrice.replace("$", ""))*12) : ""}
-                  className={index === 1 ? "relative -top-12 mq1325:top-0" : "" }
+                  totalPrice={
+                    isAnnual
+                      ? String(Number(plan.annualPrice.replace("$", "")) * 12)
+                      : ""
+                  }
+                  className={index === 1 ? "relative -top-12 mq1325:top-0" : ""}
                 />
               ) : (
                 <div
