@@ -126,7 +126,7 @@ const PricingCard: React.FunctionComponent<PricingCardType> = ({
         </span>
       )}
       <div
-        className="self-stretch rounded-xl bg-whitesmoke-100 flex flex-col items-center justify-center p-8 gap-8 z-[1] text-lg text-color-6 mq450:gap-4"
+        className="self-stretch rounded-xl bg-whitesmoke-100 flex flex-col items-center justify-center p-8 gap-8 z-[1] text-lg text-color-3 mq450:gap-4"
         style={frameDiv2Style}
       >
         <div className="w-[311px] h-56 relative rounded-xl bg-whitesmoke-100 hidden" />

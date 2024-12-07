@@ -68,12 +68,7 @@ const SAHome: FunctionComponent = () => {
         />
         <div className="absolute top-[557.6px] left-[1172.8px] [filter:blur(1000px)] rounded-[50%] bg-color w-[634px] h-[649px] z-[1] " />
         <div className="absolute top-[-375px] left-[-367px] [filter:blur(1000px)] rounded-[50%] bg-color w-[634px] h-[650px] z-[1]" />
-        {/* <img
-          className="absolute top-[252px] left-[52rem] w-[585px] h-[446.5px] object-contain z-[2] mq800:hidden"
-          loading="lazy"
-          alt=""
-          src="/mask-group@2x.png"
-        /> */}
+     
       </section>
       <Hero />
 
@@ -87,7 +82,7 @@ const SAHome: FunctionComponent = () => {
           <SpecialPricing />
         </div>
       
-      <VideoDemo />
+      {/* <VideoDemo /> */}
       <section className="self-stretch flex flex-col items-center justify-start gap-12 max-w-full mq750:gap-6">
         <Testimonials />
         <div id="contact">

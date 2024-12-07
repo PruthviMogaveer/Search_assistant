@@ -52,14 +52,14 @@ const FAQ: FunctionComponent<FAQType> = ({ className = "" }) => {
           <h1 className="m-0 self-stretch mq1125:text-center relative text-inherit font-semibold font-[inherit] mq800:text-19xl mq450:text-10xl">
             Your Questions Answered
           </h1>
-          <div className="w-[423px] mq800:text-[16px] mq1125:text-center mq1125:mb-5 relative text-lg leading-[30px] font-body-text-plus-jakarta-sans-regular-16 text-color-6 inline-block max-w-full">
+          <div className="w-[423px] mq800:text-[16px] mq1125:text-center mq1125:mb-5 relative text-lg leading-[30px] font-body-text-plus-jakarta-sans-regular-16 text-color-3 inline-block max-w-full">
             Explore the commonly asked questions to gain insights into
             TechHarbor's solutions and processes. We're committed to providing
             transparency and addressing your inquiries to ensure a smooth and
             informed experience.
           </div>
         </div>
-        <div className="h-auton mq1125:-ml-2 w-[700px] min-w-[300px] max-w-full flex flex-col items-start justify-start pt-1 px-0 pb-0 box-border text-5xl text-color-6 
+        <div className="h-auton mq1125:-ml-2 w-[700px] min-w-[300px] max-w-full flex flex-col items-start justify-start pt-1 px-0 pb-0 box-border text-5xl text-color-3 
   mq1125:min-w-full 
   mq1325:flex-1
   mq800:text-xl mq800:w-full mq800:min-w-[100%] mq800:px-2">
@@ -107,7 +107,7 @@ const FAQ: FunctionComponent<FAQType> = ({ className = "" }) => {
                     zIndex: openFAQIndex === index ? 10 : 0
                   }}
                 >
-                  <div className="p-4 text-color-6 mq800:text-sm mq800:p-2">
+                  <div className="p-4 text-color-3 mq800:text-sm mq800:p-2">
                     {faq.answer}
                   </div>
                 </div>

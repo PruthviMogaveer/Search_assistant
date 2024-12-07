@@ -51,7 +51,7 @@ const FeatureContainer1: FunctionComponent<FeatureContainer1Type> = ({
                 <div className="relative leading-[32px] font-medium mq450:text-lgi mq450:leading-[26px]">
                   Extensive Broker Network
                 </div>
-                <div className="self-stretch flex flex-row items-start justify-start gap-2 max-w-full text-lg text-color-6">
+                <div className="self-stretch flex flex-row items-start justify-start gap-2 max-w-full text-lg text-color-3">
                   <div className="flex flex-col items-start justify-start pt-[9.5px] px-0 pb-0">
                     <img
                       className="w-4 h-4 relative mq800:w-3 mq800:h-3"
@@ -80,7 +80,7 @@ const FeatureContainer1: FunctionComponent<FeatureContainer1Type> = ({
                 <div className="relative leading-[32px] font-medium inline-block max-w-full mq450:text-lgi mq450:leading-[26px]">
                   Focus on the Individual Buyer
                 </div>
-                <div className="self-stretch flex flex-row items-start justify-start gap-2 max-w-full text-lg text-color-6">
+                <div className="self-stretch flex flex-row items-start justify-start gap-2 max-w-full text-lg text-color-3">
                   <div className="flex flex-col items-start justify-start pt-[9.2px] px-0 pb-0">
                     <img
                       className="w-4 h-4 relative  mq800:w-3 mq800:h-3"
@@ -98,7 +98,7 @@ const FeatureContainer1: FunctionComponent<FeatureContainer1Type> = ({
               </div>
             </div>
   
-            <div className="relative text-xs text-color-6">
+            <div className="relative text-xs text-color-3">
               * measured as brokers in the US who are members of a national or regional business broker association.
             </div>
           </div>

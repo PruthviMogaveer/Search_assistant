@@ -61,14 +61,14 @@ const Contact: FunctionComponent<ContactType> = ({
             Contact Us
           </h1>
           <div
-            className="self-stretch relative text-base leading-[30px] text-color-6 mq800:text-center"
+            className="self-stretch relative text-base leading-[30px] text-color-3 mq800:text-center"
             style={ourTeamIsStyle}
           >
             Our team is here to help you succeed
           </div>
         </div>
         <div
-          className="h-[66px] w-[285px] flex flex-col items-start justify-start pt-3 px-0 pb-0 box-border text-left text-lg text-color-6 mq800:w-full mq800:items-center"
+          className="h-[66px] w-[285px] flex flex-col items-start justify-start pt-3 px-0 pb-0 box-border text-left text-lg text-color-3 mq800:w-full mq800:items-center"
           style={contactInfoStyle}
         >
           <div className="self-stretch flex-1 flex flex-row items-start justify-start gap-6 mq800:flex-col mq800:items-center">
