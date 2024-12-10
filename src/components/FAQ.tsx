@@ -14,24 +14,29 @@ export type FAQType = {
 const faqData: FAQItem[] = [
   {
     question: "What's included in the launch pricing?",
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
   },
   {
     question: "Can I cancel my subscription anytime?",
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
   },
   {
     question: "Do you offer a free trial?",
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
   },
   {
     question: "What payment methods do you accept?",
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
   },
   {
     question: "Is there a set up fee?",
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
-  }
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+  },
 ];
 
 const FAQ: FunctionComponent<FAQType> = ({ className = "" }) => {
@@ -40,7 +45,7 @@ const FAQ: FunctionComponent<FAQType> = ({ className = "" }) => {
 
   // Toggle FAQ item open/closed
   const toggleFAQ = (index: number) => {
-    setOpenFAQIndex(prevIndex => prevIndex === index ? null : index);
+    setOpenFAQIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
   return (
@@ -52,17 +57,19 @@ const FAQ: FunctionComponent<FAQType> = ({ className = "" }) => {
           <h1 className="m-0 self-stretch mq1125:text-center relative text-inherit font-semibold font-[inherit] mq800:text-19xl mq450:text-10xl">
             Your Questions Answered
           </h1>
-          <div className="w-[423px] mq800:text-[16px] mq1125:text-center mq1125:mb-5 relative text-lg leading-[30px] font-body-text-plus-jakarta-sans-regular-16 text-color-3 inline-block max-w-full">
+          <div className="w-[500px] mq1325:w-[450px] mq800:text-[16px] mq1125:text-center mq1125:mb-5 relative text-lg leading-[30px] font-body-text-plus-jakarta-sans-regular-16 text-color-3 inline-block max-w-full">
             Explore the commonly asked questions to gain insights into
             TechHarbor's solutions and processes. We're committed to providing
             transparency and addressing your inquiries to ensure a smooth and
             informed experience.
           </div>
         </div>
-        <div className="h-auton mq1125:-ml-2 w-[700px] min-w-[300px] max-w-full flex flex-col items-start justify-start pt-1 px-0 pb-0 box-border text-5xl text-color-3 
+        <div
+          className="h-auton mq1125:-ml-2 w-[700px] min-w-[300px] max-w-full flex flex-col items-start justify-start pt-1 px-0 pb-0 box-border text-5xl text-color-3 
   mq1125:min-w-full 
   mq1325:flex-1
-  mq800:text-xl mq800:w-full mq800:min-w-[100%] mq800:px-2">
+  mq800:text-xl mq800:w-full mq800:min-w-[100%] mq800:px-2"
+        >
           <div className="self-stretch flex-1 flex flex-col items-start justify-start gap-[31px]">
             {faqData.map((faq, index) => (
               <div key={index} className="w-full">
@@ -72,19 +79,21 @@ const FAQ: FunctionComponent<FAQType> = ({ className = "" }) => {
             [transition-property:all] ease-[cubic-bezier(0.4,_0,_0.2,_1)] duration-[150ms]
             cursor-pointer 
             mq800:w-full 
-            ${openFAQIndex === index ? 'bg-gray-100' : ''}`}
+            ${openFAQIndex === index ? "bg-gray-100" : ""}`}
                   onClick={() => toggleFAQ(index)}
                 >
-                  <div className="w-full flex flex-row items-start justify-start gap-[197px] mq800:gap-4">
-                    <div className="h-[29px] w-[462px] relative font-medium inline-block shrink-0 
+                  <div className="w-full flex flex-row items-start justify-between gap-[197px] mq800:gap-4">
+                    <div
+                      className="h-[29px] w-[462px] relative font-medium inline-block shrink-0 
               mq450:text-lgi 
-              mq800:text-base mq800:w-full mq800:max-w-[calc(100%-40px)]">
+              mq800:text-base mq800:w-full mq800:max-w-[calc(100%-40px)]"
+                    >
                       {faq.question}
                     </div>
                     <div className="h-[26px] w-6 flex flex-col items-start justify-start pt-0.5 px-0 pb-0 box-border">
                       <img
                         className={`w-6 h-6 relative overflow-hidden shrink-0 object-contain transform transition-transform
-                  ${openFAQIndex === index ? 'rotate-180' : ''}`}
+                  ${openFAQIndex === index ? "rotate-180" : ""}`}
                         alt="Expand/Collapse"
                         src="/layer-11@2x.png"
                       />
@@ -96,18 +105,20 @@ const FAQ: FunctionComponent<FAQType> = ({ className = "" }) => {
                 <div
                   className={`w-full overflow-hidden transition-all duration-300 ease-in-out
             mq800:w-full
-            ${openFAQIndex === index
-                      ? 'max-h-[1000px] opacity-100 visible'
-                      : 'max-h-0 opacity-0 invisible'}`}
+            ${
+              openFAQIndex === index
+                ? "max-h-[1000px] opacity-100 visible"
+                : "max-h-0 opacity-0 invisible"
+            }`}
                   style={{
                     // Dynamic height adjustment for mq800
-                    height: openFAQIndex === index ? 'auto' : '0',
+                    height: openFAQIndex === index ? "auto" : "0",
                     // Ensures content pushes other elements down
-                    position: 'relative',
-                    zIndex: openFAQIndex === index ? 10 : 0
+                    position: "relative",
+                    zIndex: openFAQIndex === index ? 10 : 0,
                   }}
                 >
-                  <div className="p-4 text-color-3 mq800:text-sm mq800:p-2">
+                  <div className="p-4 text-color-3 mq800:text-sm mq800:p-2 text-[20px] leading-10 mq800:text-[16px] mq800:leading-6">
                     {faq.answer}
                   </div>
                 </div>

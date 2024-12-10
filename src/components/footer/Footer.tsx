@@ -162,11 +162,10 @@ const Footer: FunctionComponent<FooterType> = ({
     }
   };
 
-  const handlePrivacyPolicyClick = (e : React.MouseEvent<HTMLAnchorElement>) => {
+  const handlePrivacyPolicyClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     window.open("/privacy-policy", "_blank");
   };
-
 
   return (
     <footer
@@ -263,7 +262,7 @@ const Footer: FunctionComponent<FooterType> = ({
               `}
             </style>
             <input
-              className="flex-grow [border:none] [outline:none] bg-[transparent] h-[33px] flex flex-col items-start justify-start pt-[9px] px-0 pb-0 box-border font-heading-text-inter-semi-bold-24 text-base text-dimgray"
+              className="flex-grow [border:none] [outline:none] bg-[transparent] h-[33px] flex flex-col items-start justify-start pt-[9px] px-0 pb-0 box-border font-heading-text-inter-semi-bold-24 text-base text-gray-100"
               placeholder="Enter your email here"
               type="email"
               id="Email"
