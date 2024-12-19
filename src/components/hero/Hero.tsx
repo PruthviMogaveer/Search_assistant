@@ -1,5 +1,6 @@
 import { FunctionComponent } from "react";
 import ButtonCTA from "../buttons/ButtonCTA";
+import HeroImg from "./HeroImg";
 
 const Hero: FunctionComponent = () => {
   return (
@@ -7,8 +8,12 @@ const Hero: FunctionComponent = () => {
       <div className="flex-1 flex flex-row items-end justify-start mq1125:items-center mq1125:justify-center max-w-full [row-gap:20px] mq750:flex-wrap">
         <div className="flex-1 flex flex-col items-start justify-start mq1125:items-center mq1125:justify-center gap-6 min-w-[379px] shrink-0 max-w-full mq750:min-w-full">
           <h1 className=" m-0 self-stretch relative text-inherit capitalize z-[2] font-[inherit] mq450:text-19xl mq750:text-32xl mq1125:text-center mq1125:-mb-8">
-            <p className="m-0 font-semibold mq750:text-29xl mq450:text-13xl">Unlocking</p>
-            <p className="m-0 font-semibold mq750:text-29xl mq450:text-13xl">Opportunities.</p>
+            <p className="m-0 font-semibold mq750:text-29xl mq450:text-13xl">
+              Unlocking
+            </p>
+            <p className="m-0 font-semibold mq750:text-29xl mq450:text-13xl">
+              Opportunities.
+            </p>
             <p className="m-0 text-color mq750:text-29xl mq450:text-13xl">
               <b>Empowering</b>
             </p>
@@ -19,15 +24,20 @@ const Hero: FunctionComponent = () => {
           <div className="w-[317px] mq1125:mt-10 mq1125:-mb-5 relative text-lg leading-[150%] text-color-3 inline-block z-[1] mq1125:text-center">
             Use the Deal Flow Assistant built for individual business buyers.
           </div>
-            <img
-              className="relative w-full object-contain z-[2] mq1125:flex  hidden"
-              loading="lazy"
-              alt=""
-              src="/HeroSmall.svg"
-            />
-          
-          
-          <ButtonCTA requestAccessTextDecoration="unset" className="relative "/>
+          {/* <img
+            className="relative w-full object-contain z-[2] mq1125:flex  hidden"
+            loading="lazy"
+            alt=""
+            src="/HeroSmall.svg"
+          /> */}
+          <div className="mq1125:flex hidden">
+            <HeroImg />
+          </div>
+
+          <ButtonCTA
+            requestAccessTextDecoration="unset"
+            className="relative "
+          />
         </div>
         {/* <div className=" h-[205px] flex flex-col items-start justify-end pt-0 px-0 pb-[39px] box-border relative left-20 text-center text-5xl text-main-color-1 mq750:flex-1 mq750:ml-0 mq800:absolute mq800:hidden">
           <div className="self-stretch flex-1 shadow-[24px_24px_64px_rgba(0,_0,_0,_0.15)] [backdrop-filter:blur(24px)] rounded-[14px] bg-gray-200 border-gray-100 border-[1px] border-solid flex flex-col items-start justify-start py-[18px] px-[19px] shrink-0 z-[3]">
@@ -84,12 +94,15 @@ const Hero: FunctionComponent = () => {
           </div>
         </div> */}
       </div>
-      <img
+      {/* <img
           className="mq1325:absolute relative mq1325:top-[252px] right-18 mq1325:right-5 mq1275:right-5 w-[45rem] h-[446.5px] object-contain z-[2] mq1125:hidden"
           loading="lazy"
           alt=""
           src="/HeroImg.png"
-        />
+        /> */}
+      <div className="mq1125:hidden mr-24 mq1275:mr-10 mq1125:mr-0 mq1125:mt-10 -mt-5">
+        <HeroImg />
+      </div>
     </div>
   );
 };
