@@ -52,7 +52,7 @@ const SAHome: FunctionComponent = () => {
         pricingWidth="unset"
         pricingAlignItems="unset"
         contactHeight="unset"
-        className="z-10"
+        className="z-50"
       />
       {/* <div className="w-[532.4px] h-[545.8px] absolute !m-[0] bottom-[2817.4px] left-[-417px] [filter:blur(1000px)] rounded-[50%] bg-color" /> */}
       <section className="self-stretch h-[1206.6px] absolute !m-[0] w-[111.11%] top-[0px] right-[-11.11%] left-[0%]">
