@@ -68,20 +68,19 @@ const SAHome: FunctionComponent = () => {
         />
         <div className="absolute top-[557.6px] left-[1172.8px] [filter:blur(1000px)] rounded-[50%] bg-color w-[634px] h-[649px] z-[1] " />
         <div className="absolute top-[-375px] left-[-367px] [filter:blur(1000px)] rounded-[50%] bg-color w-[634px] h-[650px] z-[1]" />
-     
       </section>
       <Hero />
 
       <ProblemContainer />
-      
-        <Banner />
-        <div className="w-screen mq1125:bg-color/5 mq1125:-mt-[9rem] mq1125:pt-32 space-y-14 mq1125:space-y-0 max-w-[1559px]">
-          <FeatureContainer1 />
-          <FeatureContainer2 />
-          <FeatureContainer3 />
-          <SpecialPricing />
-        </div>
-      
+
+      <Banner />
+      <div className="w-screen mq1125:bg-color/5 mq1125:-mt-[9rem] mq1125:pt-32 space-y-14 mq1125:space-y-0 max-w-[1559px]">
+        <FeatureContainer1 />
+        <FeatureContainer2 />
+        <FeatureContainer3 />
+        <SpecialPricing />
+      </div>
+
       {/* <VideoDemo /> */}
       <section className="self-stretch flex flex-col items-center justify-start gap-12 max-w-full mq750:gap-6">
         <Testimonials />

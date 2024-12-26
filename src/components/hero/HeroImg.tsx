@@ -134,7 +134,7 @@ const HeroImg = () => {
         () => setAnimate((prev) => ({ ...prev, location: true })),
         2500
       ),
-        setTimeout(() => setAnimate((prev) => ({ ...prev, action: true })), 3500),
+      setTimeout(() => setAnimate((prev) => ({ ...prev, action: true })), 3500),
       setTimeout(
         () => setAnimate((prev) => ({ ...prev, metrics: true })),
         4000
@@ -159,7 +159,7 @@ const HeroImg = () => {
           name: false,
           broker: false,
           location: false,
-            action: false,
+          action: false,
           metrics: false,
           tags: false,
           feedback: false,
@@ -309,9 +309,11 @@ const HeroImg = () => {
                 <h3 className="text-base font-semibold text-[#03012C]">
                   {deals[currentDeal].companyName}
                 </h3>
-                <div className={`flex items-center text-xs text-[#3B6064] mt-1 transition-opacity duration-500 ${
-              animate.location ? "opacity-100" : "opacity-0"
-            }`}>
+                <div
+                  className={`flex items-center text-xs text-[#3B6064] mt-1 transition-opacity duration-500 ${
+                    animate.location ? "opacity-100" : "opacity-0"
+                  }`}
+                >
                   <Building2 className="h-4 w-4 mr-1 flex-shrink-0" />
                   <span className="truncate">
                     {deals[currentDeal].location} •{" "}
@@ -319,9 +321,11 @@ const HeroImg = () => {
                   </span>
                 </div>
               </div>
-              <div className={`w-[40%] flex items-center justify-end mq750:w-full transition-opacity duration-500  ${
-              animate.action ? "opacity-100" : "opacity-0"
-            }`}>
+              <div
+                className={`w-[40%] flex items-center justify-end mq750:w-full transition-opacity duration-500  ${
+                  animate.action ? "opacity-100" : "opacity-0"
+                }`}
+              >
                 <button className="flex-1 sm:flex-none px-4 py-2 max-w-[60%] mq750:max-w-[100%] bg-[#26A96C] text-white rounded-lg hover:bg-[#26A96C]/90">
                   Request
                 </button>
